@@ -1,21 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rich' Portfolio</title>
-</head>
+    <head>
+         <!-- meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page - Rich' Portfolio</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Bootstrap Icon CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="/static/css/fontawesome.css">
+        <!-- Google Fonts CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Estonia&family=Lusitana:wght@400;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- Define Favicon -->
+        <link rel="icon" type="image/png" href="/static/img/logo/favicon.png">
+        
+    <!-- GLightbox CSS: for iframes -->
+    <link rel="stylesheet" href="static/vendors/css/glightbox.min.css">
+    
+    </head>
+
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-xl navbar-dark menu shadow fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="https://www.linkedin.com/in/rich-liu/" title="LinkedIn">
-                <img class="menu-logo" src="ima" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-xl navbar-dark menu shadow fixed-top">
+    <!-- changed div class from container-fluid to container -->
+    <div class="container">
+        <a class="navbar-brand" href="https://www.linkedin.com/in/rich-liu/" title="LinkedIn">
+            <img class="menu-logo"  src="static/img/logo.png"alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- move the navbar-collapse to the end -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/rich-liu/">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/rich627">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.kaggle.com/ricg627">Kaggle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact</a>
+                </li>
+
+            </ul>
+            <button type="button" class="rounded-pill btn-rounded">
+                <a href="mailto:rich.liu627@gmail.com" style="text-decoration: none">Connect with me</a>
+                <span>
+                    <i class="fas fa-paper-plane"></i>
+                </span>
             </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Intro Section -->
+    <section id="home" class="intro-section">
+        <div class="container">
+            <div class="row align-items-center text-white">
+                
+                <div class="col-md-6 col-xs-12 intros text-start">
+                    <h1 class="display-2">
+                        <span class="display-2--intro">Hi! My name is</span>
+                        <span class="display-2--name">Rich</span>
+                        <span class="display-2--description lh-base">I'm a Mathematics student specializing in Information Mathematics 
+                            at Fu Jen Catholic University. Passionate about AI, Data Science, and Machine Learning, 
+                            I'm currently interning as an AI Software QA at CyberLink.</span>
+                    </h1>
+                </div>
+                <!-- START THE CONTENT FOR THE VIDEO -->
+                <div class="col-md-6 col-xs-12 intros text-end">
+                    <div>
+                        <img src="https://user-images.githubusercontent.com/74038190/212748842-9fcbad5b-6173-4175-8a61-521f3dbb7514.gif" width="400">
+                        <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+                            <span><i class="fas fa-play-circle"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,256L48,261.3C96,267,192,277,288,245.3C384,213,480,139,576,128C672,117,768,171,864,186.7C960,203,1056,181,1152,144C1248,107,1344,53,1392,26.7L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="certificates">
+<div class="container">
+    <div class="row text-center">
+        <h1 class="display-3 fw-bold lead md-3">Certificates</h1>
+        <div class="heading-line mb-5"></div>
+    </div>
+</div>
+<!-- START THE CERTIFICATES CONTENT -->
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-6 col-md-3">
+            <div class="certificates__certificate-box">
+                <a href="">
+                    <img src="static/img/AWS-Certified-Data-Analytics-Specialty.png"
+                        alt="AWS Certified Data Analytics - Specialty" title="AWS Certified Data Analytics - Specialty" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="certificates__certificate-box">
+                <a href="">
+                    <img src="static/img/AWS-Certified-Solutions-Architect-Associate.png"
+                        alt="AWS Certified Solution Architect - Associate"
+                        title="AWS Certified Solution Architect - Associate" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="certificates__certificate-box">
+                <a href="https://www.credly.com/badges/759a8a59-994b-487c-babf-532e9aa271ff/public_url">
+                    <img src="static/img/Azure-Data-Scientist-Associate.png"
+                        alt="Azure Data Scientist - Associate" title="Azure Data Scientist - Associate" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="certificates__certificate-box">
+                <a href="https://www.credly.com/badges/913255b9-2fd4-4276-98fa-3d519aec45c3/public_url">
+                    <img src="static/img/Azure-AI-Fundamentals.png"
+                        alt="Azure AI Fundamentals" title="Azure AI Fundamentals" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- SKILL SET -->
+    <section id="skill-set" class="skill-set">
+        <div class="container">
+            <!-- HEADER -->
+            <div class="row text-center">
+                <h1 class="display-3 fw-bold">Skill Set</h1>
+                <div class="heading-line"></div>
+            </div>
+        </div>
+        <!-- CONTAINER: SKILL SET -->
+        <div class="container">
+            <!-- CONTENT: DATA ANALYTICS & BUSINESS INTELLIGENCE -->
+            <div class="row mt-3">
+                <div class="col-12 col-md-6 skill-set">
+                    <div class="skill-set__content">
+                        <div class="icon d-block fas fa-chart-bar"></div>
+                        <h3 class="mt-1">Data Analytics & Business Intelligence</h3>
+                        <ul>
+                            <li>Data Analysis, Business Analysis</li>
+                            <li><b>Business Intelligence</b>: Tableau, Power BI, AWS QuickSight, MS Excel</li>
+                            <li><b>Data Analysis</b>: Pandas, NumPy, PySpark</li>
+                            <li><b>Visualizations</b>: Seaborn, Plotly, Matplotlib</li>
+                        </ul>
+                        <a href="#portfolio">
+                            <button type="button" class="rounded-pill btn-rounded border-primary">Work Samples
+                                <span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 skill-set mt-auto text-end">
+                    <div class="skill-set__pic">
+                        <img src="static/img/skill-set/Graphic_Isometric.svg"
+                            alt="data analytics & business intelligence illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT: DATA SCIENCE & ARTIFICIAL INTELLIGENCE -->
+            <div class="row">
+                <div class="col-12 col-md-6 skill-set mt-auto text-start">
+                    <div class="skill-set__pic">
+                        <img src="static/img/skill-set/Brainstorming session _Isometric.svg"
+                            alt="machine learning illustration" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 skill-set">
+                    <div class="skill-set__content">
+                        <div class="icon d-block fas fa-lightbulb"></div>
+                        <h3 class="mt-1">Data Science & Artificial Intelligence</h3>
+                        <ul>
+                            <li>Math, Statistics, Probability, Hypothesis Testing</li>
+                            <li><b>Machine Learning</b>: Supervised Learning, Unsupervised Learning, Reinforcement Learning</li>
+                            <li><b>Deep Learning</b>: Natural Language Processing, Computer Vision, Large Language Model</li>
+                            <li><b>Frameworks</b>: Scikit-learn, TensorFlow, Keras, PyTorch</li>
+                        </ul>
+                        <a href="#portfolio">
+                            <button type="button" class="rounded-pill btn-rounded border-primary">Work Samples
+                                <span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT: COMPUTER SCIENCE & DEVELOPING -->
+            <div class="row">
+                <div class="col-12 col-md-6 skill-set">
+                    <div class="skill-set__content">
+                        <div class="icon d-block fas fa-laptop-code"></div>
+                        <h3 class="mt-1">Computer Science & Developing</h3>
+                        <ul>
+                            <li><b>Languages</b>: Python, R, Java, C++, Julia, HTML, CSS, JavaScript</li>
+                            <li><b>DevOps</b>: Git, Docker, Xamarin</li>
+                        </ul>
+                        <a href="#portfolio">
+                            <button type="button" class="rounded-pill btn-rounded border-primary">Work Samples
+                                <span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 skill-set mt-auto text-end">
+                    <div class="skill-set__pic">
+                        <img src="static/img/skill-set/Code Development _Isometric.svg"
+                            alt="programming & databases illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- CONTENT: DATA ENGINEERING & BIG DATA -->
+            <div class="row">
+                <div class="col-12 col-md-6 skill-set mt-auto text-start">
+                    <div class="skill-set__pic">
+                        <img src="static/img/skill-set/Data Hosting_Isometric.svg"
+                            alt="cloud architecting & big data illustration" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 skill-set">
+                    <div class="skill-set__content">
+                        <div class="icon d-block fas fa-server"></div>
+                        <h3 class="mt-1">Data Engineering & Big Data</h3>
+                        <ul>
+                            <li><b>Big Data</b>: ETL, AWS Glue, AWS EMR, Apache Spark</li>
+                            <li><b>Data Mining</b>: Web Crawler, Pandas, PySpark, SQLAlchemy, Beautiful Soup</li>
+                            <li><b>SQL</b>: AWS Aurora, AWS RDS, AWS Redshift, MySQL, MS SQL, PostgreSQL</li>
+                            <li><b>NoSQL & Data Lake</b>: AWS DynamoDB, AWS S3, MongoDB</li>
+                        </ul>
+                        <a href="#portfolio">
+                            <button type="button" class="rounded-pill btn-rounded border-primary">Work Samples
+                                <span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--  SKILL LEVELS -->
+<section id="skill-levels" class="skill-levels">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,128L144,288L288,256L432,320L576,160L720,224L864,128L1008,256L1152,128L1296,32L1440,160L1440,0L1296,0L1152,0L1008,0L864,0L720,0L576,0L432,0L288,0L144,0L0,0Z">
+        </path>
+    </svg>
+    <div class="container">
+        <div class="row text-white">
+            <h1 class="display-3 fw-bold text-center">Skill Levels</h1>
+            <hr style="width: 100px; height: 3px;" class="mx-auto">
+        </div>
+        <!-- START THE CAROUSEL CONTENT -->
+        <div class="row align-items-center">
+            <div id="skill-levels-carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#skill-levels-carouselDark" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#skill-levels-carouselDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#skill-levels-carouselDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#skill-levels-carouselDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#skill-levels-carouselDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- CAROUSEL ITEM 0: Overall -->
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="static/img/skill-levels/overall.svg" alt="overall image">
+                    </div>
+                    <!-- CAROUSEL ITEM 1: Data Analytics -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="static/img/skill-levels/data_analytics.svg" alt="data analytics image">
+                    </div>
+                    <!-- CAROUSEL ITEM 2: Data Science -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="static/img/skill-levels/data_science.svg" alt="data science image">
+                    </div>
+                    <!-- CAROUSEL ITEM 3: Computer Science -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="static/img/skill-levels/computer_science.svg" alt="computer science image">
+                    </div>
+                    <!-- CAROUSEL ITEM 4: Data Engineering -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="static/img/skill-levels/data_engineering.svg" alt="data engineering image">
+                    </div>
+                </div>
+                <!-- LEFT & RIGHT BUTTONS -->
+                <div class="text-center">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#skill-levels-carouselDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#skill-levels-carouselDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,128L144,288L288,256L432,320L576,160L720,224L864,128L1008,256L1152,128L1296,32L1440,160L1440,320L1296,320L1152,320L1008,320L864,320L720,320L576,320L432,320L288,320L144,320L0,320Z">
+        </path>
+    </svg>
+</section>
+
+<!--  EDUCATION & WORK EXPERIENCE -->
+<!-- TODO: Add time & location; update content -->
+<section id="work-experience" class="work-experience">
+    <div class="container">
+        <div class="row text-center">
+            <h1 class="display-3 fw-bold">Education & Work Experience</h1>
+            <div class="heading-line"></div>
+        </div>
+        <!-- ACCORDION CONTENT -->
+        <div class="row mt-5"></div>
+        <div class="col-md-12">
+            <div class="accordion" id="accordion-work-experience">
+                <!-- ACCORDION ITEM 1: Education -->
+                <div class="accordion-item shadow mb-3">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Master's Degree in Analytics<br>
+                            Northeastern University (Boston, MA, USA)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordion-work-experience">
+                        <div class="accordion-body">
+                            01/2019 - 07/2020
+                            <ul>
+                                <li>Probability & Statistics, Enterprise Analytics, Risk Management, Leadership in
+                                    Analytics, Business Intelligence</li>
+                                <li>Data Mining, Data Visualization, Data Warehouse & SQL, Machine Learning, Cloud
+                                    Analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACCORDION ITEM 2: Education -->
+                <div class="accordion-item shadow mb-3">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Nanodegrees<br>
+                            Udacity (Online)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordion-work-experience">
+                        <div class="accordion-body">
+                            06/2020 - Present
+                            <ul>
+                                <li>Data Scientist</li>
+                                <li>Data Structures & Algorithms</li>
+                                <li>AWS Machine Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACCORDION ITEM 3: Work Experience -->
+                <div class="accordion-item shadow mb-3">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Advanced Analytics and Cloud Architect<br>
+                            Pluralpoint Group Inc. (Remote)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordion-work-experience">
+                        <div class="accordion-body">
+                            10/2020 - Present
+                            <ul>
+                                <li style="color: #adb5bd;"><i>Summary: Tremendous experience in Data Science, Data
+                                        processing, Data Pipelines, Big Data, Business Intelligence, and
+                                        Programming.</i></li>
+                                <li>Improved data transfer and query efficiency by 1000% and reduced 50% cost by cloud
+                                    architecture optimization and big
+                                    data implementation.</li>
+                                <li>Supported and collaborated with the R&D team through data analytics and KPI design
+                                    to enhance product quality and user
+                                    experience.</li>
+                                <li>Established ad-hoc and strategic dashboards to influence data-driven decision making
+                                    for exploring new opportunities.</li>
+                                <li>Communicated with stakeholders and senior management for business growth through
+                                    data visualization software and
+                                    statistical software.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACCORDION ITEM 4: Cyber Security Consultant Internship -->
+                <div class="accordion-item shadow mb-3">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Cyber Security Consultant Internship<br>
+                            DBAPP Security. (Zhejiang, China)
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordion-work-experience">
+                        <div class="accordion-body">
+                            12/2016 - 04/2017
+                            <ul>
+                                <li style="color: #adb5bd;"><i>Summary: Extensive client facing and cross-functional
+                                        teamwork experience.</i></li>
+                                <li>Engaged as an independent security assessor to conduct a security audit for
+                                    well-known banks, financial institutions,
+                                    and universities.</li>
+                                <li>Reduced the risk of customers' information leakage by performing regular security
+                                    assessments for data systems, data
+                                    infrastructure, and web APP.</li>
+                                <li>Visited customers frequently for ensuring the implementations followed the approved
+                                    security standards and requirements.</li>
+                                <li>Conducted frequent communication with customers and engineering team to rectify
+                                    misconfigurations highlighted in the
+                                    report.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+        SECTION 7: THE PORTFOLIO
+    -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row text-center mt-5">
+            <h1 class="display-3 fw-bold"><a href="/projects" title="View More">Projects</a></h1>
+            <div class="heading-line"></div>
+            <p class="lead">
+                Part of work samples and personal projects. <a href="/projects">View more.</a>
+            </p>
+        </div>
+        <!-- FILTER BUTTONS -->
+        <div class="row mt-5 mb-4 g-3 text-center">
+            <div class="col-md-12">
+                <button class="btn btn-outline-primary filter-button" data-filter="all" type="button">All</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="data-science" type="button">Data
+                    Science</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="data-engineering" type="button">Data
+                    Engineering</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="data-analytics" type="button">Data
+                    Analytics</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="solution-architect"
+                    type="button">Solution Architect</button>
+            </div>
+        </div>
+        <!-- START THE PORTFOLIO ITEMS -->
+        <div class="row">
+            <!-- Project 0: Disaster Response Pipelines -->
+            <div class="col-lg-4 col-md-6 filter data-science data-engineering data-analytics solution-architect">
+                <a href="/projects/disaster_response_pipelines">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/disaster_response_pipelines.png"
+                            alt="Disaster Response Pipelines picture" title="Disaster Response Pipelines picture"
+                            class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>Disaster Response Pipelines</h4>
+                                <p>Data Science, Data Engineering, Data Analytics, Solution Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 1: Airbnb Seattle Rental Price Prediction -->
+            <div class="col-lg-4 col-md-6 filter data-science data-analytics">
+                <a href="https://medium.com/mlearning-ai/how-airbnb-evaluates-the-listings-b35c5a7890cb">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/kaggle-seattle-airbnb.png" alt="kaggle seattle airbnb picture"
+                            title="kaggle seattle airbnb picture" class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>Airbnb Seattle Rental Price Prediction</h4>
+                                <p>Data Science, Data Analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 2: Udacity A/B Testing -->
+            <div class="col-lg-4 col-md-6 filter data-science data-analytics">
+                <a href="https://youtu.be/13d0D6zCwkY">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/udacity-ab-testing.png" alt="udacity a/b testing picture"
+                            title="udacity a/b testing picture" class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>A/B Testing for Udacity</h4>
+                                <p>Data Science, Data Analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 3: AWS QuickSight -->
+            <div class="col-lg-4 col-md-6 filter data-analytics">
+                <a href="https://zacks.one/aws-quicksight-lab/">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-quicksight.png" alt="aws quicksight picture"
+                            title="aws quicksight picture" class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>Dashboarding: AWS QuickSight</h4>
+                                <p>Data Analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 4: Glue -->
+            <div class="col-lg-4 col-md-6 filter data-engineering">
+                <a href="https://zacks.one/aws-glue-lab/">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-glue.png" alt="aws glue picture" title="aws glue picture"
+                            class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>ETL for Batch Data: AWS Glue</h4>
+                                <p>Data Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 5: Kinesis -->
+            <div class="col-lg-4 col-md-6 filter data-engineering">
+                <a href="https://zacks.one/aws-kinesis-lab/">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-kinesis.png" alt="aws kinesis picture"
+                            title="aws kinesis picture" class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>ETL for Streaming Data: AWS Kinesis</h4>
+                                <p>Data Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 6: Big Data -->
+            <div class="col-lg-4 col-md-6 filter data-engineering">
+                <a href="https://zacks.one/aws-emr-lab/">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-emr.png" alt="aws emr picture" title="aws emr picture"
+                            class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>Big Data: AWS EMR</h4>
+                                <p>Data Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 7: OLAP: AWS Redshift -->
+            <div class="col-lg-4 col-md-6 filter data-analytics data-engineering">
+                <a href="https://zacks.one/aws-redshift-lab/">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-redshift.png" alt="aws redshift picture"
+                            title="aws redshift picture" class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>OLAP: AWS Redshift</h4>
+                                <p>Data Analytics, Data Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Project 9: AWS EC2 -->
+            <div class="col-lg-4 col-md-6 filter solution-architect">
+                <a href="https://youtu.be/H-9uCEy0IB4">
+                    <div class="portfolio-box shadow">
+                        <img src="static/img/portfolio/aws-ec2.png" alt="aws ec2 picture" title="aws ec2 picture"
+                            class="img-fluid">
+                        <div class="portfolio-info">
+                            <div class="caption">
+                                <h4>Sample Solution for Startups</h4>
+                                <p>Solution Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!--
+    SECTION 9: THE FOOTER
+-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- CONTENT FOR THE MOBILE NUMBER -->
+            <div class="col-md-4 col-lg-4 contact-box pt1 d-md-block d-lg-flex d-flex">
+                <div class="contact-box__icon"><i class="bi bi-telephone"></i></div>
+                <div class="contact-box__info">
+                    <a href="tel:936-488-139" class="contact-box__info--title">+886 936488138</a>
+                </div>
+            </div>
+            <!-- CONTENT FOR EMAIL -->
+            <div class="col-md-4 col-lg-4 contact-box pt1 d-md-block d-lg-flex d-flex">
+                <div class="contact-box__icon"><i class="bi bi-envelope"></i></div>
+                <div class="contact-box__info">
+                    <a href="mailto:zacks.shen@gmail.com" class="contact-box__info--title">rich.liu627@gmail.com</a>
+                    <p class="contact-box__info--subtitle">Email</p>
+                </div>
+            </div>
+    </div>
+
+    <!-- START THE SOCIAL MEDIA CONTENT -->
+    <div class="footer-sm" style="background-color: #212121;">
+        <div class="container">
+            <div class="row py-4 text-center text-white">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    Connect with me on social media
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <a href="https://www.linkedin.com/in/rich-liu/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/rich627"><i class="fab fa-github"></i></a>
+                    <a href="https://www.kaggle.com/rich627"><i class="fab fa-kaggle"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START THE COPYRIGHT INFO -->
+    <div class="footer-bottom pt-5 pb-5">
+        <div class="container">
+            <div class="row text-center text-white">
+                <div class="col-12">
+                    <div class="footer-bottom__copyright">
+                        &COPY; Copyright 2021 <a href="https://www.linkedin.com/in/rich-liu/">Rich Liu</a>
+                        | Created by <a href="">Zacks Shen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<!-- JQuery JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Specific Page JS goes HERE  -->
+    
+<!-- Glightbox Javascript -->
+<script src="/static/vendors/js/glightbox.min.js"></script>
+<script type="text/javascript">
+    const lightbox = GLightbox({
+        // TODO: Change the YouTube link
+        'href': 'https://youtu.be/yykOeLkXJAE',
+        'type': 'video',
+        'source': 'youtube', //vimeo, youtube or local
+        'width': 900,
+        'autoPlayVideos': 'true',
+    });
+</script>
+<!-- Javascript for SECTION 7: THE PORTFOLIO -->
+<script src="/static/js/portfolio.js"></script>
 </body>
 </html>

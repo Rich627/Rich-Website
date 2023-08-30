@@ -479,6 +479,7 @@ progress {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  padding: 10;
 }
 
 .display-1 {

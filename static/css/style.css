@@ -229,7 +229,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: rgb(30, 180, 255)
+  color: rgb(30, 130, 255)
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -640,6 +640,7 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -4548,12 +4549,12 @@ textarea.form-control-lg {
   }
 }
 .accordion-button:not(.collapsed) {
-
+  
   background-color: rgb(0, 210, 255);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' color='rgb(100, 100, 255)' fill='currentColor' class='bi bi-dash-circle' viewBox='0 0 16 16'%3e%3cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3e%3cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' color='rgb(50, 150, 230)' fill='currentColor' class='bi bi-dash-circle' viewBox='0 0 16 16'%3e%3cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3e%3cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3e%3c/svg%3e");
   transform: rotate(-180deg);
 }
 
@@ -4563,7 +4564,7 @@ textarea.form-control-lg {
   height: 1.875rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' color='rgb(0, 210, 255)' fill='currentColor' class='bi bi-plus-circle' viewBox='0 0 16 16'%3e%3cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3e%3cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' color='rgb(50, 150, 230)' fill='currentColor' class='bi bi-plus-circle' viewBox='0 0 16 16'%3e%3cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3e%3cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.875rem;
   transition: transform 0.2s ease-in-out;
@@ -11134,7 +11135,7 @@ textarea.form-control-lg {
 }
 .btn-rounded span {
   position: absolute;
-  background-color: rgb(30, 180, 255);
+  background-color: rgb(80, 200, 255);
   width: 2.5rem;
   height: 2.5rem;
   top: 50%;
@@ -11537,7 +11538,7 @@ body {
 
 .menu-logo {
   position: relative;
-  max-width: 120px;
+  max-width: 110px;
   display: block;
 }
 
@@ -11552,7 +11553,7 @@ body {
 .portfolio-box {
   position: relative;
   width: 100%;
-  max-height: 18.5rem;
+  height: 18.5rem;
   overflow: hidden;
   margin-bottom: 1.2rem;
   border-top: 0.5rem solid rgb(30, 180, 255);
@@ -11563,7 +11564,7 @@ body {
   height: 100%;
 }
 .portfolio-box .portfolio-info {
-  background-color: rgba(229, 1, 110, 0.75);
+  background-color: rgb(0, 210, 255);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -11649,7 +11650,7 @@ section {
   font-family: "Orbitron", sans-serif;
   font-size: 0.8rem;
   text-transform: capitalize;
-  background-image: linear-gradient(to right, rgb(200, 10, 110), rgb(240, 130, 0));  
+  background-image: linear-gradient(to right, rgb(0, 180, 255), rgb(0, 210, 255));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -196,11 +196,11 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 small, .small {
-  font-size: 0.875em;
+  font-size: 0.9em;
 }
 
 mark, .mark {
@@ -243,7 +243,7 @@ kbd,
 samp {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
-  direction: ltr /* rtl:ignore */;
+  direction: ltr;
   unicode-bidi: bidi-override;
 }
 
@@ -455,9 +455,10 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
   padding: 10;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .display-1 {
@@ -474,6 +475,7 @@ progress {
 .display-2 {
   line-height: 1.2;
 }
+
 @media (min-width: 1200px) {
   .display-2 {
     font-size: 4.5rem;
@@ -1146,6 +1148,7 @@ progress {
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
+    padding-top: 20px;
   }
 
   .col-md-7 {
@@ -1354,6 +1357,7 @@ progress {
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
+    font-size: 20px;
   }
 
   .col-lg-6 {
@@ -3900,7 +3904,6 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -5717,7 +5720,7 @@ textarea.form-control-lg {
 .popover {
   position: absolute;
   top: 0;
-  left: 0 /* rtl:ignore */;
+  left: 0;
   z-index: 1070;
   display: block;
   max-width: 276px;
@@ -5983,7 +5986,6 @@ textarea.form-control-lg {
 }
 
 .carousel-indicators {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -5992,7 +5994,6 @@ textarea.form-control-lg {
   justify-content: center;
   padding: 0;
   margin-right: 15%;
-  margin-bottom: 1rem;
   margin-left: 15%;
   list-style: none;
 }
@@ -6001,7 +6002,7 @@ textarea.form-control-lg {
   flex: 0 1 auto;
   width: 30px;
   height: 3px;
-  padding: 0;
+  padding: 1px;
   margin-top: 3rem;
   margin-right: 3px;
   margin-left: 3px;
@@ -6048,7 +6049,7 @@ textarea.form-control-lg {
 
 @keyframes spinner-border {
   to {
-    transform: rotate(360deg) /* rtl:ignore */;
+    transform: rotate(360deg);
   }
 }
 .spinner-border {
@@ -11171,6 +11172,7 @@ textarea.form-control-lg {
 }
 .display-2--intro {
   font-weight: 650;
+  font-size: 5rem;
 }
 
 @keyframes blink {
@@ -11180,7 +11182,8 @@ textarea.form-control-lg {
 }
 
 .display-2--name{
-  font-size: 1200;
+  font-weight: 600;
+  font-size: 6rem;
   font-family: "Eczar", cursive;
   color: rgb(255, 220, 0);
   animation: blink 1.5s infinite;
@@ -11193,17 +11196,17 @@ textarea.form-control-lg {
   position: relative;
 }
 .display-2--description {
-  padding-top: 1rem;
-  font-family: 'Arial-Rounded', sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
+  padding-top: 1.2rem;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
   display: block;
   margin-top: 0;
   text-transform: none;
 }
 @media (min-width: 992px) {
   .display-2--description {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: inline-block;
   }
 }
@@ -11250,7 +11253,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .display-3 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 }
 .display-3--title {
@@ -11276,7 +11279,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   .display-3--title {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 }
 .display-3--title-black {
@@ -11440,19 +11443,19 @@ body {
 
 .footer-bottom {
   background-color: #000;
+  margin-top: 20px;
 }
+
 .footer-bottom__copyright {
   color: #6c757d;
   font-weight: 400;
+  font-size: 17px;
 }
 .footer-bottom__copyright a {
   color: #dee2e6;
   text-decoration: none;
 }
-.footer-bottom__copyright a:hover {
-  color: #e5016e;
-  text-decoration: underline;
-}
+
 
 .back-to-top {
   position: fixed;
@@ -11510,9 +11513,7 @@ body {
 }
 
 .intro-section h1 {
-  
   color: #000;
-  padding: 4rem 0 0 0;
   width: 100%;
   height: 100%;
 }
@@ -11554,6 +11555,7 @@ body {
   color: #fff !important;
   text-transform: capitalize;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .menu-logo {
@@ -11576,7 +11578,6 @@ body {
   height: 18.5rem;
   overflow: hidden;
   margin-bottom: 1.2rem;
-  border-top: 0.5rem solid rgb(30, 180, 255);
   border-radius: 1%;
 }
 .portfolio-box img {
@@ -11584,7 +11585,6 @@ body {
   height: 100%;
 }
 .portfolio-box .portfolio-info {
-  background-color: rgb(0, 210, 255);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -11600,36 +11600,34 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Gill Sans', sans-serif;
 }
 .portfolio-box .portfolio-info .caption h4 {
   text-transform: capitalize;
   display: block;
 }
+
 .portfolio-box:hover img {
   transform: scale(1.5);
   transition-duration: 1s;
   transition-property: all;
 }
+
 .portfolio-box:hover .portfolio-info {
   opacity: 1;
   visibility: visible;
   transition-duration: 1s;
   transition-property: all;
+  background-color: rgb(80, 200, 255);
 }
+
 
 section {
   padding: 1.5rem 0;
 }
-@media (min-width: 768px) {
-  section {
-    padding: 4rem 0;
-  }
-}
 
 .skill-levels {
   position: relative;
-  /* background-color: rgb(0, 210, 255); */
-  /* clip-path: polygon(20% 0%, 80% 0%, 90% 95%, 0% 95%); */
   padding: 60px 0;
 }
 
@@ -11646,10 +11644,11 @@ section {
 
 .skill-levels .carousel-inner .carousel-item img {
   border-radius: 2%;
-  width: 55%;
+  width: 40%;
 }
 
-/* 针对不同屏幕寬度的媒体查询 */
+
+
 @media (min-width: 576px) {
   .skill-levels .carousel-inner .carousel-item img {
     width: 40%;
@@ -11672,9 +11671,9 @@ section {
   box-shadow: 0px 0px 20px 5px rgba(0,0,5,0.75);
   -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,5,0.75);
   -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,5,0.75);
-  border-radius: 5px; /* Add rounded corners for a card-like effect */
+  border-radius: 5px; 
   max-width: 80%;
-  height: auto; /* Maintain the image's aspect ratio */
+  height: auto;
 }
 
 
@@ -11702,12 +11701,12 @@ section {
 }
 .skill-set__content ul {
   list-style-type: square;
-  font-family: Lusitana;
-  font-size: 0.8rem;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.0rem;
 }
 @media (min-width: 768px) {
   .skill-set__content ul {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .skill-set__content .icon {
@@ -11738,21 +11737,22 @@ section {
 
 
 .work-experience .accordion-header .accordion-button {
-  font-family: "Eczar";
+  font-family: "Gill Sans", sans-serif;
   font-size: 1rem;
 }
 @media (min-width: 992px) {
   .work-experience .accordion-header .accordion-button {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .work-experience .accordion-body {
   font-family: "Lusitana";
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 @media (min-width: 992px) {
   .work-experience .accordion-body {
     font-size: 1.2rem;
+    font-family: "Gill Sans", sans-serif;
   }
 }
 

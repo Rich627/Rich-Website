@@ -197,6 +197,7 @@ blockquote {
 b,
 strong {
   font-weight: 600;
+  font-size: 1.1em;
 }
 
 small, .small {
@@ -11229,7 +11230,7 @@ textarea.form-control-lg {
 .heading-line::after {
   content: "";
   width: 4rem;
-  padding-top: 0.4rem;
+  padding-top: 0.3rem;
   height: 0.2rem;
   display: block;
   margin: 0 auto;
@@ -11840,25 +11841,25 @@ td {
 .skill li em { 
 	font-weight: 600;
   font-size: 1.2rem;
+  position: relative; 
+  top: -25px;
+  margin-left: -3px;
 }
 
 .ds-bar{ 
 	height: 3px; 
-	margin: 2px 0; 
 	background: #ff1491;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.6);
 }
 .da-bar { 
 	height: 3px; 
-	margin: 2px 0; 
 	background: #00b4ff;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(173, 255, 47,0.4);
 }
 .de-bar { 
 	height: 3px; 
-	margin: 2px 0; 
 	background: #32ff50;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(255, 69, 0,0.4);
@@ -11871,7 +11872,7 @@ td {
 
 .skill li { 
 	margin-bottom:70px; 
-	background:#030303; 
+	background: #555555; 
 	height:6px; 
 	border-radius:3px; 
 	border-left:1px solid #111; 
@@ -11885,8 +11886,9 @@ h2.da {
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
-  background: linear-gradient(90deg, #00b4ff, #0077b3); /* 使用渐变颜色 */
+  background: linear-gradient(90deg, #00b4ff, #0077b3); 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -11895,8 +11897,9 @@ h2.ds {
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
-  background: linear-gradient(90deg, #ff1491, #b30060); /* 使用渐变颜色 */
+  background: linear-gradient(90deg, #ff1491, #b30060); 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -11905,52 +11908,274 @@ h2.de {
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
-  background: linear-gradient(90deg, #32ff50, #00b300); /* 使用渐变颜色 */
+  background: linear-gradient(90deg, #32ff50, #00b300); 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 
-.machine-learning      { width:80%;  animation:machine-leaning    2s ease-out;       }
-.deep-learning        { width:70%;  animation:deep-learning 2s ease-out;        }
-.feature-engineering       { width:60%;  animation:feature-engineering 2s ease-out;        }
-.statistics  { width:70%;  animation:statistics 2s ease-out; }
+.machine-learning {
+  width: 80%;
+  animation: machine-leaning 2s ease-out;
+}
 
-.business-intelligence  { width:50%;  animation:business-intelligence 2s ease-out;  }
-.sql-query  { width:8%;  animation:sql-query 2s ease-out; }
-.data-visualiztion     { width:70%;  animation:data-visualiztion 2s ease-out;     }
-.data-analysis      { width:50%;  animation:data-analysis 2s ease-out;    }
+.deep-learning, .feature-engineering, .statistics, .business-intelligence, .sql-query, .data-visualiztion, .data-analysis, .cloud-architect, .data-warehousing, .data-mining, .etl {
+  width: 70%;
+  animation: 2s ease-out;
+}
 
-.cloud-architect { width:80%;  animation:cloud-architect 2s ease-out;}
-.data-warehousing { width:30%;  animation:data-warehousing2s ease-out;}
-.data-mining  { width:30%;  animation:data-mining  2s ease-out;  }
-.etl   { width:50%;  animation:etl 2s ease-out;   }
+.deep-learning {
+  animation-name: deep-learning;
+}
 
+.feature-engineering {
+  animation-name: feature-engineering;
+}
 
-@keyframes de      { 0% { opacity:0; } 100% { opacity:1; }  }
+.statistics {
+  animation-name: statistics;
+}
 
-@keyframes machine-learning       { 0% { width:0px; } 100% { width:90%; }  }
-@keyframes deep-learning        { 0% { width:0px; } 100% { width:95%; }  }
-@keyframes feature-engineering         { 0% { width:0px; } 100% { width:70%; }  }
-@keyframes statistics { 0% { width:0px; } 100% { width:50%; }  }
+.business-intelligence {
+  width: 50%;
+  animation-name: business-intelligence;
+}
 
-@keyframes business-intelligence   { 0% { width:0px; } 100% { width:80%; }  }
-@keyframes sql-query { 0% { width:0px; } 100% { width:60%; }  }
-@keyframes data-visualiztion     { 0% { width:0px; } 100% { width:40%; }  }
-@keyframes data-analysis    { 0% { width:0px; } 100% { width:70%; }  }
+.sql-query {
+  width: 8%;
+  animation-name: sql-query;
+}
 
-@keyframes cloud-architect { 0% { width:0px; } 100% { width:90%; }  }
-@keyframes data-warehousing { 0% { width:0px; } 100% { width:30%; }  }
-@keyframes data-mining  { 0% { width:0px; } 100% { width:70%; }  }
-@keyframes etl { 0% { width:0px; } 100% { width:50%; }  }
+.data-visualiztion {
+  animation-name: data-visualiztion;
+}
 
+.data-analysis {
+  width: 50%;
+  animation-name: data-analysis;
+}
+
+.cloud-architect {
+  width: 80%;
+  animation-name: cloud-architect;
+}
+
+.data-warehousing {
+  width: 30%;
+  animation-name: data-warehousing;
+}
+
+.data-mining {
+  animation-name: data-mining;
+}
+
+.etl {
+  animation-name: etl;
+}
+
+@keyframes deep-learning {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 95%;
+    opacity: 1;
+  }
+}
+
+@keyframes feature-engineering {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes statistics {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes business-intelligence {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes sql-query {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes data-visualiztion {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes data-analysis {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes cloud-architect {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes data-warehousing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes data-mining {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes etl {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
 
 .col-skill {
-	width: 25%;
+  width: 25%;
   margin: 0 4%;
   position: relative;
   float: left;
   font-size: 12px;
   line-height: 2em;
   padding: 5% 0;
-} 
+}
+
+body{margin-top:20px;}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+.section-title h2 {
+    font-weight: 700;
+    color: #20247b;
+    font-size: 45px;
+    margin: 0 0 15px;
+    border-left: 5px solid #fc5356;
+    padding-left: 15px;
+}
+.section-title {
+    padding-bottom: 45px;
+}
+.section-title p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Resume Box
+---------------------*/
+.resume-box {
+  background: #ffffff;
+  box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.08);
+  border-radius: 10px;
+}
+.resume-box ul {
+  margin: 0;
+  padding: 30px 20px;
+  list-style: none;
+}
+.resume-box li {
+  position: relative;
+  padding: 0 20px 0 60px;
+  margin: 0 0 30px;
+}
+.resume-box li:last-child {
+  margin-bottom: 0;
+}
+.resume-box li:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  border-left: 1px dashed #fc5356;
+  bottom: 0;
+}
+.resume-box .icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fc5356;
+  line-height: 40px;
+  background: #ffffff;
+  text-align: center;
+  z-index: 1;
+  border: 1px dashed;
+  border-radius: 50%;
+}
+.resume-box .time {
+  background: #fc5356;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 2px 10px;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.resume-box h5 {
+  font-weight: 700;
+  color: #20247b;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.resume-box p {
+  margin: 0;
+}
+
+.resume-box li:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    border-left: 1px dashed #fc5356;
+    bottom: 0;
+}

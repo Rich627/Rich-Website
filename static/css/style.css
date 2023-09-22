@@ -459,7 +459,7 @@ progress {
   font-size: 1.3rem;
   font-weight: 400;
   padding: 10;
-  font-family: "Gill Sans", sans-serif;
+  font-family: 'Rowdies', cursive;
 }
 
 .display-1 {
@@ -1140,12 +1140,13 @@ progress {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
+ 
 
   .col-md-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-
+  
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
@@ -3860,7 +3861,9 @@ textarea.form-control-lg {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
+.nav-item {
+  margin-right: 12px;
+}
 .nav-pills .nav-link {
   background: none;
   border: 0;
@@ -3888,6 +3891,7 @@ textarea.form-control-lg {
 .nav-fill .nav-item .nav-link,
 .nav-justified .nav-item .nav-link {
   width: 100%;
+  
 }
 
 .tab-content > .tab-pane {
@@ -11173,7 +11177,7 @@ textarea.form-control-lg {
 
 
 .display-2 {
-  margin-bottom: 1rem;
+  margin-bottom: 3.5rem;
   text-transform: capitalize;
   font-family: "Eczar", cursive;
 }
@@ -11204,19 +11208,22 @@ textarea.form-control-lg {
 }
 .display-2--description {
   padding-top: 1.2rem;
-  font-family: "Gill Sans", sans-serif;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2rem;
   display: block;
   margin-top: 0;
   text-transform: none;
+  font-family: 'Bebas Neue', sans-serif;
 }
 @media (min-width: 992px) {
   .display-2--description {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     display: inline-block;
+    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
   }
 }
+
 
 .heading-line::before {
   content: "";
@@ -11400,11 +11407,14 @@ body {
 .contact-box__info--title {
   color: #fff;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 2.2rem;
+  font-family: 'Khand', sans-serif;
 }
 @media (min-width: 992px) {
   .contact-box__info--title {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-family: 'Khand', sans-serif;
+    font-weight: 900;
   }
 }
 .contact-box__info--subtitle {
@@ -11528,6 +11538,10 @@ body {
   height: 100%;
 }
 
+.intro-section {
+  margin-top: -40px; 
+}
+
 
 .intros .video-box {
   position: relative;
@@ -11556,7 +11570,7 @@ body {
 
 .menu {
   background: linear-gradient(to right, rgb(30, 180, 255), rgb(0, 210, 255));
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Francois One', sans-serif;
 }
 .menu li {
   padding: 0 0.7rem;
@@ -11565,7 +11579,7 @@ body {
   color: #fff !important;
   text-transform: capitalize;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .menu-logo {
@@ -11696,7 +11710,7 @@ section {
   margin-top: 0;
 }
 .skill-set__content h3 {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Rowdies', cursive;
   font-size: 0.8rem;
   text-transform: capitalize;
   background-image: linear-gradient(to right, rgb(0, 180, 255), rgb(0, 210, 255));
@@ -11706,17 +11720,16 @@ section {
 }
 @media (min-width: 992px) {
   .skill-set__content h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 .skill-set__content ul {
-  list-style-type: square;
-  font-family: "Gill Sans", sans-serif;
+  font-family: 'Rowdies', cursive;
   font-size: 1.0rem;
 }
 @media (min-width: 768px) {
   .skill-set__content ul {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 }
 .skill-set__content .icon {
@@ -11844,6 +11857,7 @@ td {
   position: relative; 
   top: -25px;
   margin-left: -3px;
+  font-family: 'Rowdies', cursive;
 }
 
 .ds-bar{ 
@@ -11882,7 +11896,7 @@ td {
 }
 
 h2.da {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
@@ -11893,7 +11907,7 @@ h2.da {
 }
 
 h2.ds {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
@@ -11904,7 +11918,7 @@ h2.ds {
 }
 
 h2.de {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
@@ -12087,7 +12101,6 @@ h2.de {
 
 body{margin-top:20px;}
 .section {
-    padding: 100px 0;
     position: relative;
 }
 
@@ -12147,6 +12160,7 @@ body{margin-top:20px;}
   color: #203d7b;
   font-size: 16px;
   margin-bottom: 10px;
+  font-family: 'Khand', sans-serif;
 }
 .resume-box p {
   margin: 0;

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.3.1 (https://getbootstrap.com/)
+ * Bootstrap v5.3.2 (https://getbootstrap.com/)
 */
 :root {
   --bs-blue: #0d6efd;
@@ -2100,12 +2100,12 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-}
+} */
 @media (max-width: 767.98px) {
   .table-responsive-md {
     overflow-x: auto;
@@ -3900,7 +3900,7 @@ textarea.form-control-lg {
 .tab-content > .active {
   display: block;
 }
-
+/*have*/
 .navbar {
   position: relative;
   display: flex;
@@ -4153,6 +4153,7 @@ textarea.form-control-lg {
     overflow-y: visible;
   }
 }
+
 @media (min-width: 1200px) {
   .navbar-expand-xl {
     flex-wrap: nowrap;
@@ -5518,7 +5519,7 @@ textarea.form-control-lg {
   border-radius: 0;
 }
 
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
   .modal-fullscreen-sm-down {
     width: 100vw;
     max-width: none;
@@ -5539,7 +5540,7 @@ textarea.form-control-lg {
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
-}
+} */
 @media (max-width: 767.98px) {
   .modal-fullscreen-md-down {
     width: 100vw;
@@ -11140,11 +11141,11 @@ textarea.form-control-lg {
   border: 0.1rem solid rgb(0, 180, 255);
   background-color: #fff;
 }
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
   .btn-rounded {
     display: none;
   }
-}
+} */
 .btn-rounded span {
   position: absolute;
   background-color: rgb(80, 200, 255);

@@ -457,9 +457,8 @@ progress {
 
 .lead {
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 600;
   padding: 10;
-  font-family: 'Rowdies', cursive;
 }
 
 .display-1 {
@@ -11855,27 +11854,27 @@ td {
 
 .skill li em { 
 	font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   position: relative; 
   top: -25px;
   margin-left: -3px;
-  font-family: 'Rowdies', cursive;
+  padding-bottom: -5px;
 }
 
 .ds-bar{ 
-	height: 3px; 
+	height: 8px; 
 	background: #ff1491;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.6);
 }
 .da-bar { 
-	height: 3px; 
+	height: 8px; 
 	background: #00b4ff;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(173, 255, 47,0.4);
 }
 .de-bar { 
-	height: 3px; 
+	height: 8px; 
 	background: #32ff50;
 	position: absolute;
 	box-shadow: 0px 0px 10px 1px rgba(255, 69, 0,0.4);
@@ -11883,13 +11882,13 @@ td {
 
 .skill { 
 	list-style:none; 
-	padding-top:30px;
+	padding-top:40px;
 }
 
 .skill li { 
 	margin-bottom:70px; 
 	background: #555555; 
-	height:6px; 
+	height: 10px; 
 	border-radius:3px; 
 	border-left:1px solid #111; 
 	border-top:1px solid #111; 
@@ -11932,62 +11931,52 @@ h2.de {
 
 
 .machine-learning {
-  width: 80%;
-  animation: machine-leaning 2s ease-out;
+  width: 70%;
 }
 
-.deep-learning, .feature-engineering, .statistics, .business-intelligence, .sql-query, .data-visualiztion, .data-analysis, .cloud-architect, .data-warehousing, .data-mining, .etl {
-  width: 70%;
-  animation: 2s ease-out;
-}
 
 .deep-learning {
-  animation-name: deep-learning;
+  width: 80%;
 }
 
 .feature-engineering {
-  animation-name: feature-engineering;
+  width: 50%;
 }
 
 .statistics {
-  animation-name: statistics;
+  width: 70%;
 }
 
 .business-intelligence {
   width: 40%;
-  animation-name: business-intelligence;
 }
 
 .sql-query {
-  width: 80%;
-  animation-name: sql-query;
+  width: 70%;
 }
 
-.data-visualiztion {
-  animation-name: data-visualiztion;
+.data-visualization {
+  width: 50%;
 }
 
 .data-analysis {
   width: 50%;
-  animation-name: data-analysis;
 }
 
 .cloud-architect {
-  width: 80%;
-  animation-name: cloud-architect;
+  width: 70%;
 }
 
 .data-warehousing {
   width: 30%;
-  animation-name: data-warehousing;
 }
 
 .data-mining {
-  animation-name: data-mining;
+  width: 40%;
 }
 
 .etl {
-  animation-name: etl;
+  width: 40%;
 }
 
 @keyframes deep-learning {
@@ -12097,7 +12086,7 @@ h2.de {
   position: relative;
   float: left;
   font-size: 12px;
-  line-height: 2em;
+  line-height: 1em;
   padding: 5% 0;
 }
 
@@ -12159,7 +12148,7 @@ body{margin-top:20px;}
 }
 .resume-box h5 {
   font-weight: 700;
-  color: #203d7b;
+  color: rgb(0, 180, 255);
   font-size: 18px;
   margin-bottom: 10px;
   font-family: 'Rowdies', cursive;
@@ -12176,3 +12165,4 @@ body{margin-top:20px;}
     border-left: 1px dashed rgb(0, 180, 255);
     bottom: 0;
 }
+

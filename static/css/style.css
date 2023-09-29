@@ -11654,6 +11654,7 @@ section {
 .skill-levels {
   position: relative;
   padding: 60px 0;
+  background-color: #e9ecef;
 }
 
 .skill-levels img {
@@ -11912,7 +11913,7 @@ h2.ds {
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
-  background: linear-gradient(90deg, #ff1491, #b30060); 
+  background: linear-gradient(90deg, #ff1491, #b30047); 
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -12149,7 +12150,7 @@ body{margin-top:20px;}
 .resume-box h5 {
   font-weight: 700;
   color: rgb(0, 180, 255);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
   font-family: 'Rowdies', cursive;
 }
@@ -12164,5 +12165,9 @@ body{margin-top:20px;}
     left: 20px;
     border-left: 1px dashed rgb(0, 180, 255);
     bottom: 0;
+}
+
+.bg-secondary {
+  background-color: #ccc; /* 灰色背景颜色 */
 }
 

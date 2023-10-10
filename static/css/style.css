@@ -567,7 +567,10 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-
+.img-fluid-110 {
+  max-width: 110%;
+  height: auto;
+}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -1173,6 +1176,13 @@ progress {
     width: 50%;
     padding-top: 30px;
   }
+
+  .col-md-48 {
+    flex: 0 0 auto;
+    width: 48%;
+    padding-top: 30px;
+  }
+
   .col-md-65 {
     flex: 0 0 auto;
     width: 55%;
@@ -4808,7 +4818,12 @@ textarea.form-control-lg {
 
 .badge-img {
   width: auto;
-  height: 25px;
+  height: 22px;
+}
+
+.badge-img-small {
+  width: auto;
+  height: 21px;
 }
 
 .badge:empty {
@@ -11250,7 +11265,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   .display-2--description {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     display: inline-block;
     font-weight: 700;
     font-family: 'Bebas Neue', sans-serif;
@@ -11758,8 +11773,9 @@ section {
   }
 }
 .skill-set__content ul {
-  font-family: 'Rowdies', cursive;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.0rem;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .skill-set__content ul {
@@ -11886,12 +11902,13 @@ td {
 
 
 .skill li em { 
-	font-weight: 600;
-  font-size: 1.5rem;
+	font-weight: bold;
+  font-size: 1.3rem;
   position: relative; 
   top: -25px;
   margin-left: -3px;
   padding-bottom: -5px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .ds-bar{ 
@@ -11931,7 +11948,7 @@ td {
 
 h2.da {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 600;
   background: linear-gradient(90deg, #00b4ff, #0077b3); 
@@ -11942,7 +11959,7 @@ h2.da {
 
 h2.ds {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 600;
   background: linear-gradient(90deg, #ff1491, #b30047); 
@@ -11953,7 +11970,7 @@ h2.ds {
 
 h2.de {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 600;
   background: linear-gradient(90deg, #32ff50, #00b300); 
@@ -12179,11 +12196,11 @@ body{margin-top:20px;}
   font-weight: 600;
 }
 .resume-box h5 {
-  font-weight: 700;
+  font-weight: bold;
   color: rgb(0, 180, 255);
   font-size: 20px;
   margin-bottom: 10px;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .resume-box p {
   margin: 0;

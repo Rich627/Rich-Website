@@ -656,6 +656,17 @@ progress {
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
+.row1 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  padding-left: 10rem;
+}
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -4067,6 +4078,7 @@ textarea.form-control-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+
   .navbar-expand-md .navbar-nav {
     flex-direction: row;
   }
@@ -4102,8 +4114,9 @@ textarea.form-control-lg {
     transition: none;
     transform: none;
   }
+  
   .navbar-expand-md .offcanvas-top,
-.navbar-expand-md .offcanvas-bottom {
+  .navbar-expand-md .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -4114,7 +4127,9 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+  
 }
+
 @media (min-width: 992px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
@@ -5065,6 +5080,8 @@ textarea.form-control-lg {
     border-left-width: 1px;
   }
 }
+
+
 @media (min-width: 768px) {
   .list-group-horizontal-md {
     flex-direction: row;
@@ -12097,7 +12114,6 @@ h2.de {
 }
 
 .col-skill {
-  width: 25%;
   margin: 0 4%;
   position: relative;
   float: left;
@@ -12183,6 +12199,84 @@ body{margin-top:20px;}
 }
 
 .bg-secondary {
-  background-color: #ccc; /* 灰色背景颜色 */
+  background-color: #ccc; 
 }
 
+@media screen and (max-width: 768px) {
+
+  .row1{
+    padding-left: 1px;
+  }
+  .resume-box li:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    border-left: 1px dashed rgb(0, 180, 255);
+    bottom: 0;
+  }
+
+  .display-2--intro {
+    font-size: 3rem;
+    position: relative;
+    top: 30px; /* 調整位置 */
+  }
+
+  .display-2--name {
+    font-size: 3rem;
+    position: relative;
+    top: 30px; /* 調整位置 */
+  }
+
+  .display-2--description {
+    font-size: 1rem;
+    position: relative;
+    top: 30px; 
+  }
+
+  .menu-logo{
+    max-width: 65px;
+  }
+  .navbar-brand {
+    padding: 0;
+  }
+  .navbar-expand-xl .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .navbar-expand-xl .navbar-collapse {
+    display: none; 
+  }
+  .navbar-expand-xl .navbar-toggler {
+    display: block; 
+  }
+  .navbar-expand-xl .collapse.show {
+    display: block !important; 
+}
+.navbar-nav .nav-link {
+  font-size: 14px; /* Adjust the font size as needed */
+}
+   /* Center-align the contact info icons */
+  .contact-box__icon {
+    text-align: center;
+  }
+
+  /* Reduce the font size for contact info titles and subtitles */
+  .contact-box__info--title {
+    font-size: 23px;
+  }
+  .contact-box__info--subtitle{
+    font-size: 18px;
+  }
+
+  /* Center-align the footer copyright text */
+  .footer-bottom__copyright {
+    text-align: center;
+    font-size: 14px;
+  }
+}

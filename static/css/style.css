@@ -55,6 +55,11 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
+  --color-red: #d75959;
+  --color-yellow: #f5c463;
+  --color-green: #9ccd7e;
+  --color-blue: #5ca7db;
+  --rgb-black: 0, 0, 0;
 }
 
 *,
@@ -13397,13 +13402,10 @@ body {
   height: 8px;
 }
 
-
-
-
 .progressbar.circle {
   position: relative;
   margin: 0 auto 30px;
-  width: 170px;
+  width: 215px;
   height: 85px;
 }
 
@@ -13419,7 +13421,6 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  color: black !important;
   font-weight: bold;
 }
 
@@ -13452,17 +13453,24 @@ body {
   stroke: var(--color-yellow)
 }
 
-.h5__title {
-  background: transparent;
-  padding: 10px;
-  width: 75%;
-  margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid #ebebeb;
-  font-size: 17px;
-  color: black;
+.speed_bar_title {
+    background: transparent;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid #ebebeb;
+    font-size: 22px;
 }
 
 .p1 {
   margin-top: 25px;
+}
+
+.github-status{
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+img.github-status{
+  width: 300px;
+  height: 180px;
 }

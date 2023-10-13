@@ -29,7 +29,6 @@
     <!-- Define Favicon -->
     <link rel="icon" href="static/img/logo/rich-low-resolution-logo-white-on-transparent-background.png"
         type="image/png">
-    <!-- 要改-->
 
 </head>
 
@@ -353,7 +352,8 @@
                                         class="badge-img" />
                                     <img src="https://img.shields.io/badge/AWS%20RDS-8E35EF.svg?style=for-the-badge&logo=amazonrds&logoColor=white&style=social"
                                         class="badge-img" />
-                                    <img src="https://img.shields.io/badge/AWS%20Redshift-2F4F4F.svg?style=for-the-badge&logo=amazonredshift&logoColor=white&style=social" class="badge-img"/>
+                                    <img src="https://img.shields.io/badge/AWS%20Redshift-2F4F4F.svg?style=for-the-badge&logo=amazonredshift&logoColor=white&style=social"
+                                        class="badge-img" />
                                     <img src="https://img.shields.io/badge/MySQL-D2691E.svg?style=for-the-badge&logo=mysql&logoColor=white&style=social"
                                         class="badge-img" />
                                     <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white&style=social"
@@ -395,42 +395,37 @@
         <div class="wrapper image-wrapper">
             <div class="container inner">
                 <div class="row">
-                    <div class="col-6 col-md-9">
+                    <div class="col-3 col-md-6">
                         <div class="row text-center">
-                            <div class="col-lg-3">
+                            <div class="col-lg-5">
                                 <div class="progressbar circle blue" data-value="80"></div>
-                                <h4>Data Science</h4>
+                                <h4 class="speed_bar_title">Data Science</h4>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-5">
                                 <div class="progressbar circle green" data-value="70"></div>
-                                <h4>Data Analytics</h4>
+                                <h6 class="speed_bar_title">Data Analytics</h6>
                             </div>
-                    <div class="col-6 col-md-9">
-                        <div class="row text-center">
-                            <div class="col-lg-3">
+                            <div class="col-lg-5">
                                 <div class="progressbar circle red" data-value="60"></div>
-                                <h4>Data Engineering</h4>
+                                <h5 class="speed_bar_title">Data Engineering</h5>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-5">
                                 <div class="progressbar circle yellow" data-value="75"></div>
-                                <h4>Computer Science</h4>
+                                <h5 class="speed_bar_title">Computer Science</h5>
                             </div>
                         </div>
-                        </div>
-                    </div>  
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rich627&theme=buefy" alt="github stats"/>
-                        <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rich627&theme=buefy" alt="github stats"/>
+                        <img class="github-status" src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rich627&theme=buefy"/>
+                        <img class="github-status" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Rich627"/>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img class="github-status" src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rich627"/>
+                        <img class="github-status" src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rich627&theme=buefy"/>
                     </div>
                 </div>
             </div>
-            <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Rich627&theme=city_lights" alt="github stats" />
-        </div>
     </section>
-
-
-
 
     <!-- EXPERIENCE -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 200">
@@ -706,6 +701,12 @@
     <!-- JQuery JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="static/js/name.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="static/js/progressbar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="static/js/speedNumber.js"></script>
+
 </body>
 
 </html>

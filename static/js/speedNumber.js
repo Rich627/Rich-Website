@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	'use strict';
-	 
+
 
 	var $pline = $('.progressbar.line');
 	var $pcircle = $('.progressbar.circle');
-	$pline.each(function(i) {
+	$pline.each(function (i) {
 		var line = new ProgressBar.Line(this, {
 			strokeWidth: 6,
 			trailWidth: 6,
@@ -22,41 +22,41 @@ $(document).ready(function() {
 				},
 				autoStyleContainer: false
 			},
-			step: function(state, line, attachment) {
+			step: function (state, line, attachment) {
 				line.setText(Math.round(line.value() * 100) + ' %');
 			}
 		});
 		var value = ($(this).attr('data-value') / 100);
-		$pline.waypoint(function() {
+		$pline.waypoint(function () {
 			line.animate(value);
 		}, {
 			offset: "100%"
 		})
 	});
-	$pcircle.each(function(i) {
+	$pcircle.each(function (i) {
 		var circle = new ProgressBar.SemiCircle(this, {
 			strokeWidth: 5,
 			trailWidth: 5,
 			duration: 2000,
 			easing: 'easeInOut',
-			step: function(state, circle, attachment) {
+			step: function (state, circle, attachment) {
 				circle.setText(Math.round(circle.value() * 100));
 			}
 		});
 		var value = ($(this).attr('data-value') / 100);
-		$pcircle.waypoint(function() {
+		$pcircle.waypoint(function () {
 			circle.animate(value);
 		}, {
 			offset: "100%"
 		})
 	});
-	 
+
 	$('.counter .value').counterUp({
 		delay: 50,
 		time: 1000
 	});
-	 
+
 	$(".countdown").countdown();
-	 
-	  
+
+
 });

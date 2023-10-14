@@ -112,7 +112,6 @@ h2,
 h1,
 .h1 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -738,6 +737,15 @@ progress {
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
+.row2 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+}
+
 .row1 {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -754,6 +762,15 @@ progress {
   width: 100%;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.row2>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
@@ -1255,6 +1272,7 @@ progress {
     flex: 0 0 auto;
     width: 50%;
     padding-top: 30px;
+    margin-right: -30px;
   }
 
   .col-md-48 {
@@ -5502,7 +5520,7 @@ fieldset:disabled .btn {
 
 .badge-img {
   width: auto;
-  height: 22px;
+  height: 25px;
 }
 
 .badge-img-small {
@@ -12752,7 +12770,7 @@ section {
 
 @media (min-width: 992px) {
   .skill-set__content h3 {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
   }
 }
 
@@ -12764,7 +12782,7 @@ section {
 
 @media (min-width: 768px) {
   .skill-set__content ul {
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 
@@ -13405,7 +13423,7 @@ body {
 .progressbar.circle {
   position: relative;
   margin: 0 auto 30px;
-  width: 215px;
+  width: 200px;
   height: 85px;
 }
 
@@ -13454,23 +13472,26 @@ body {
 }
 
 .speed_bar_title {
-    background: transparent;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px solid #ebebeb;
-    font-size: 22px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #ebebeb;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
+
 
 .p1 {
   margin-top: 25px;
 }
 
-.github-status{
+.github-status {
   margin-top: 7px;
   margin-bottom: 7px;
 }
 
-img.github-status{
-  width: 300px;
-  height: 180px;
+img.github-status {
+  margin-top: 15px;
+  height: 195px;
 }

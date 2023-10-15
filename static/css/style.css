@@ -505,6 +505,12 @@ progress {
   padding: 10;
 }
 
+.lead-1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10;
+}
+
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -770,7 +776,6 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
@@ -2244,12 +2249,7 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
-/* @media (max-width: 575.98px) {
-  .table-responsive-sm {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-} */
+
 @media (max-width: 767.98px) {
   .table-responsive-md {
     overflow-x: auto;
@@ -4503,7 +4503,6 @@ fieldset:disabled .btn {
   display: block;
 }
 
-/*have*/
 .navbar {
   position: relative;
   display: flex;
@@ -5398,8 +5397,6 @@ fieldset:disabled .btn {
   padding-right: 0.5rem;
   color: #6c757d;
   content: var(--bs-breadcrumb-divider, "/")
-    /* rtl: var(--bs-breadcrumb-divider, "/") */
-  ;
 }
 
 .breadcrumb-item.active {
@@ -6377,28 +6374,6 @@ fieldset:disabled .btn {
   border-radius: 0;
 }
 
-/* @media (max-width: 575.98px) {
-  .modal-fullscreen-sm-down {
-    width: 100vw;
-    max-width: none;
-    height: 100%;
-    margin: 0;
-  }
-  .modal-fullscreen-sm-down .modal-content {
-    height: 100%;
-    border: 0;
-    border-radius: 0;
-  }
-  .modal-fullscreen-sm-down .modal-header {
-    border-radius: 0;
-  }
-  .modal-fullscreen-sm-down .modal-body {
-    overflow-y: auto;
-  }
-  .modal-fullscreen-sm-down .modal-footer {
-    border-radius: 0;
-  }
-} */
 @media (max-width: 767.98px) {
   .modal-fullscreen-md-down {
     width: 100vw;
@@ -6829,7 +6804,6 @@ fieldset:disabled .btn {
   display: block;
 }
 
-/* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%);
@@ -6840,7 +6814,6 @@ fieldset:disabled .btn {
   transform: translateX(-100%);
 }
 
-/* rtl:end:ignore */
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
@@ -8505,13 +8478,11 @@ fieldset:disabled .btn {
   white-space: nowrap !important;
 }
 
-/* rtl:begin:remove */
 .text-break {
   word-wrap: break-word !important;
   word-break: break-word !important;
 }
 
-/* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
@@ -12130,11 +12101,7 @@ fieldset:disabled .btn {
   background-color: #fff;
 }
 
-/* @media (max-width: 575.98px) {
-  .btn-rounded {
-    display: none;
-  }
-} */
+
 .btn-rounded span {
   position: absolute;
   background-color: rgb(80, 200, 255);
@@ -12215,6 +12182,7 @@ fieldset:disabled .btn {
   text-transform: none;
   font-family: 'Bebas Neue', sans-serif;
 }
+
 
 @media (min-width: 992px) {
   .display-2--description {
@@ -12696,47 +12664,6 @@ body {
 section {
   padding: 1.5rem 0;
 }
-
-/* .skill-levels {
-  position: relative;
-  padding: 60px 0;
-}
-
-.skill-levels img {
-  position: relative;
-  z-index: 1;
-}
-
-.skill-levels .carousel-inner {
-  position: relative;
-  padding: 0;
-  text-align: center;
-}
-
-.skill-levels .carousel-inner .carousel-item img {
-  border-radius: 2%;
-  width: 40%;
-}
-
-
-
-@media (min-width: 576px) {
-  .skill-levels .carousel-inner .carousel-item img {
-    width: 40%;
-  }
-}
-
-@media (min-width: 768px) {
-  .skill-levels .carousel-inner .carousel-item img {
-    width: 30%;
-  }
-}
-
-@media (min-width: 992px) {
-  .skill-levels .carousel-inner .carousel-item img {
-    width: 55%;
-  }
-} */
 
 .carousel-item img {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 5, 0.75);
@@ -13266,7 +13193,7 @@ body {
 @media screen and (max-width: 768px) {
 
   .row1 {
-    padding-left: 1px;
+    padding-left: 20px;
   }
 
   .certificates__certificate-box {
@@ -13284,27 +13211,27 @@ body {
   }
 
   .display-2--intro {
-    font-size: 3rem;
+    font-size: 4.2rem;
     position: relative;
-    top: 30px;
-    /* 調整位置 */
+    top: 20px;
   }
 
   .display-2--name {
-    font-size: 3rem;
+    font-size: 5rem;
     position: relative;
-    top: 30px;
-    /* 調整位置 */
+    top: 20px;
   }
 
   .display-2--description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: relative;
     top: 30px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
   }
 
   .menu-logo {
-    max-width: 65px;
+    max-width: 55px;
   }
 
   .navbar-brand {
@@ -13335,54 +13262,108 @@ body {
   }
 
   .navbar-nav .nav-link {
-    font-size: 14px;
-    /* Adjust the font size as needed */
+    font-size: 15px;
   }
 
-  /* Center-align the contact info icons */
   .contact-box__icon {
     text-align: center;
   }
 
-  /* Reduce the font size for contact info titles and subtitles */
   .contact-box__info--title {
-    font-size: 25px;
+    font-size: 28px;
+  }
+  .lead-1{
+    font-size: 1.2rem;
   }
 
   .contact-box__info--subtitle {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  /* Center-align the footer copyright text */
   .footer-bottom__copyright {
     text-align: center;
     font-size: 14px;
   }
 
-  .skill-set__content h3,
-  li {
+  .skill-set__content h3 {
     font-size: 1.2rem;
+  }
+  .img-fluid {
+    padding-left: 20px;
+    max-width: 125%;
+  }
+  .img-fluid-1 {
+    padding-left: 50px;
+  }
+  .img-fluid-110{
+    padding-left: 50px;
+    max-width: 120%;
+  }
+  .img-fluid-2 {
+    padding-left: 50px;
+    max-width: 150%;
+  }
+  .skill-set__content ul {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   #resume .time {
     font-size: 12px;
-    /* 调整时间段文本的字体大小 */
   }
 
   #resume .resume-box h5 {
     font-size: 15px;
+    font-family: 'Arial', sans-serif;
   }
 
   #resume .resume-box p {
     font-size: 14px;
-    /* 调整字体大小为所需值 */
   }
 
   #resume .resume-box li {
     padding: 0 20px 0 50px;
-    /* 调整左侧空白为所需值 */
+  }
+
+  .skill-set__content {
+    padding-left: 2rem;
+  }
+
+  .img-fluid-1 {
+    padding-left: 4rem;
+  }
+  .contact-box__icon{
+    font-size: 3rem;
+  }
+  .wrapper {
+    margin-top: 50px; 
+  }
+
+  .progressbar.circle {
+    width: 100px; /* Adjust the width for smaller screens */
+    height: 100px; /* Adjust the height for smaller screens */
+  }
+
+  .progressbar.circle .progressbar-text {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .speed_bar_title {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin: 10px 0; /* Add margin to separate titles */
+  }
+
+  .github-status {
+    height: auto; /* Make the image height responsive */
+    display: block; /* Ensure the images stack vertically */
+    margin: 10px 0; /* Add margin to separate images */
+  }
+  .speed_bar_title{
+    font-size: 1.2rem;
   }
 }
+  
 
 
 .wrapper {

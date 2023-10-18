@@ -13193,7 +13193,7 @@ body {
 @media screen and (max-width: 768px) {
 
   .row1 {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   .certificates__certificate-box {
@@ -13211,7 +13211,7 @@ body {
   }
 
   .display-2--intro {
-    font-size: 4.2rem;
+    font-size: 4.3rem;
     position: relative;
     top: 20px;
   }
@@ -13272,7 +13272,8 @@ body {
   .contact-box__info--title {
     font-size: 28px;
   }
-  .lead-1{
+
+  .lead-1 {
     font-size: 1.2rem;
   }
 
@@ -13288,21 +13289,26 @@ body {
   .skill-set__content h3 {
     font-size: 1.2rem;
   }
+
   .img-fluid {
     padding-left: 20px;
     max-width: 125%;
   }
+
   .img-fluid-1 {
     padding-left: 50px;
   }
-  .img-fluid-110{
+
+  .img-fluid-110 {
     padding-left: 50px;
     max-width: 120%;
   }
+
   .img-fluid-2 {
     padding-left: 50px;
     max-width: 150%;
   }
+
   .skill-set__content ul {
     font-family: 'Arial', sans-serif;
     font-size: 1.2rem;
@@ -13333,37 +13339,55 @@ body {
   .img-fluid-1 {
     padding-left: 4rem;
   }
-  .contact-box__icon{
+
+  .contact-box__icon {
     font-size: 3rem;
   }
+
+  .skill-set__content .col-lg-5 {
+    width: 100%;
+    text-align: center;
+  }
+
   .wrapper {
-    margin-top: 50px; 
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .progressbar.circle {
-    width: 100px; /* Adjust the width for smaller screens */
-    height: 100px; /* Adjust the height for smaller screens */
+    width: 100%;
   }
 
   .progressbar.circle .progressbar-text {
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
-
-  .speed_bar_title {
-    font-size: 16px; /* Adjust font size for smaller screens */
-    margin: 10px 0; /* Add margin to separate titles */
+    font-size: 20px;
   }
 
   .github-status {
-    height: auto; /* Make the image height responsive */
-    display: block; /* Ensure the images stack vertically */
-    margin: 10px 0; /* Add margin to separate images */
+    margin-top: 10px;
   }
-  .speed_bar_title{
-    font-size: 1.2rem;
+
+  img.github-status {
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 100%;
+    height: auto;
   }
+
+
+  .container.inner .row.text-center {
+    margin: 20px 0;
+  }
+
+  .speed_bar_title {
+    margin-left: 95px !important;
+    margin-right: 95px !important;
+  }
+
 }
-  
+
+
 
 
 .wrapper {
@@ -13458,8 +13482,8 @@ body {
   border-radius: 50px;
   border: 2px solid #ebebeb;
   font-size: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 

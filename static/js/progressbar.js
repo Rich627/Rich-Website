@@ -23,14 +23,11 @@
             }));
 
         }, {}], 2: [function (require, module, exports) {
-            // Circle shaped progress bar
 
             var Shape = require('./shape');
             var utils = require('./utils');
 
             var Circle = function Circle(container, options) {
-                // Use two arcs to form a circle
-                // See this answer http://stackoverflow.com/a/10477334/1446092
                 this._pathTemplate =
                     'M 50,50 m 0,-{radius}' +
                     ' a {radius},{radius} 0 1 1 0,{2radius}' +
@@ -65,7 +62,7 @@
             module.exports = Circle;
 
         }, { "./shape": 7, "./utils": 9 }], 3: [function (require, module, exports) {
-            // Line shaped progress bar
+
 
             var Shape = require('./shape');
             var utils = require('./utils');
@@ -102,26 +99,20 @@
 
         }, { "./shape": 7, "./utils": 9 }], 4: [function (require, module, exports) {
             module.exports = {
-                // Higher level API, different shaped progress bars
                 Line: require('./line'),
                 Circle: require('./circle'),
                 SemiCircle: require('./semicircle'),
                 Square: require('./square'),
 
-                // Lower level API to use any SVG path
                 Path: require('./path'),
 
-                // Base-class for creating new custom shapes
-                // to be in line with the API of built-in shapes
-                // Undocumented.
                 Shape: require('./shape'),
 
-                // Internal utils, undocumented.
                 utils: require('./utils')
             };
 
         }, { "./circle": 2, "./line": 3, "./path": 5, "./semicircle": 6, "./shape": 7, "./square": 8, "./utils": 9 }], 5: [function (require, module, exports) {
-            // Lower level API to animate any kind of svg path
+
 
             var shifty = require('shifty');
             var utils = require('./utils');
@@ -135,12 +126,10 @@
             };
 
             var Path = function Path(path, opts) {
-                // Throw a better error if not initialized with `new` keyword
                 if (!(this instanceof Path)) {
                     throw new Error('Constructor was called without new keyword');
                 }
 
-                // Default parameters for animation
                 opts = utils.extend({
                     delay: 0,
                     duration: 800,
@@ -157,12 +146,10 @@
                     element = path;
                 }
 
-                // Reveal .path as public attribute
                 this.path = element;
                 this._opts = opts;
                 this._tweenable = null;
 
-                // Set up the starting positions
                 var length = this.path.getTotalLength();
                 this.path.style.strokeDasharray = length + ' ' + length;
                 this.set(0);
@@ -173,8 +160,7 @@
                 var length = this.path.getTotalLength();
 
                 var progress = 1 - offset / length;
-                // Round number to prevent returning very small number like 1e-30, which
-                // is practically 0
+
                 return parseFloat(progress.toFixed(6), 10);
             };
 
@@ -197,8 +183,6 @@
                 this.path.style.strokeDashoffset = this._getComputedDashOffset();
             };
 
-            // Method introduced here:
-            // http://jakearchibald.com/2013/animated-line-drawing-svg/
             Path.prototype.animate = function animate(progress, opts, cb) {
                 opts = opts || {};
 
@@ -209,7 +193,6 @@
 
                 var passedOpts = utils.extend({}, opts);
 
-                // Copy default opts to new object so defaults are not modified
                 var defaultOpts = utils.extend({}, this._opts);
                 opts = utils.extend(defaultOpts, opts);
 
@@ -218,8 +201,6 @@
 
                 this.stop();
 
-                // Trigger a layout so styles are calculated & the browser
-                // picks up the starting position before animating
                 this.path.getBoundingClientRect();
 
                 var offset = this._getComputedDashOffset();
@@ -258,7 +239,6 @@
                 return length - progress * length;
             };
 
-            // Resolves from and to values for animation.
             Path.prototype._resolveFromAndTo = function _resolveFromAndTo(progress, easing, opts) {
                 if (opts.from && opts.to) {
                     return {
@@ -273,12 +253,9 @@
                 };
             };
 
-            // Calculate `from` values from options passed at initialization
             Path.prototype._calculateFrom = function _calculateFrom(easing) {
                 return shifty.interpolate(this._opts.from, this._opts.to, this.value(), easing);
             };
-
-            // Calculate `to` values from options passed at initialization
             Path.prototype._calculateTo = function _calculateTo(progress, easing) {
                 return shifty.interpolate(this._opts.from, this._opts.to, progress, easing);
             };
@@ -301,15 +278,12 @@
             module.exports = Path;
 
         }, { "./utils": 9, "shifty": 1 }], 6: [function (require, module, exports) {
-            // Semi-SemiCircle shaped progress bar
 
             var Shape = require('./shape');
             var Circle = require('./circle');
             var utils = require('./utils');
 
             var SemiCircle = function SemiCircle(container, options) {
-                // Use one arc to form a SemiCircle
-                // See this answer http://stackoverflow.com/a/10477334/1446092
                 this._pathTemplate =
                     'M 50,50 m -{radius},0' +
                     ' a {radius},{radius} 0 1 1 {2radius},0';
@@ -332,7 +306,7 @@
                 textContainer
             ) {
                 if (opts.text.style) {
-                    // Reset top style
+
                     textContainer.style.top = 'auto';
                     textContainer.style.bottom = '0';
 
@@ -344,14 +318,12 @@
                 }
             };
 
-            // Share functionality with Circle, just have different path
             SemiCircle.prototype._pathString = Circle.prototype._pathString;
             SemiCircle.prototype._trailString = Circle.prototype._trailString;
 
             module.exports = SemiCircle;
 
         }, { "./circle": 2, "./shape": 7, "./utils": 9 }], 7: [function (require, module, exports) {
-            // Base object for different progress bar shapes
 
             var Path = require('./path');
             var utils = require('./utils');
@@ -359,23 +331,13 @@
             var DESTROYED_ERROR = 'Object is destroyed';
 
             var Shape = function Shape(container, opts) {
-                // Throw a better error if progress bars are not initialized with `new`
-                // keyword
                 if (!(this instanceof Shape)) {
                     throw new Error('Constructor was called without new keyword');
                 }
 
-                // Prevent calling constructor without parameters so inheritance
-                // works correctly. To understand, this is how Shape is inherited:
-                //
-                //   Line.prototype = new Shape();
-                //
-                // We just want to set the prototype for Line.
                 if (arguments.length === 0) {
                     return;
                 }
-
-                // Default parameters for progress bar creation
                 this._opts = utils.extend({
                     color: '#555',
                     strokeWidth: 1.0,
@@ -387,7 +349,7 @@
                             color: null,
                             position: 'absolute',
                             left: '53%',
-                            top: 'auto',
+                            top: '-20px',
                             padding: 0,
                             margin: -22,
                             transform: {
@@ -405,10 +367,7 @@
                         width: '100%'
                     },
                     warnings: false
-                }, opts, true);  // Use recursive extend
-
-                // If user specifies e.g. svgStyle or text style, the whole object
-                // should replace the defaults to make working with styles easier
+                }, opts, true);
                 if (utils.isObject(opts) && opts.svgStyle !== undefined) {
                     this._opts.svgStyle = opts.svgStyle;
                 }
@@ -439,7 +398,6 @@
                     utils.setStyles(svgView.svg, this._opts.svgStyle);
                 }
 
-                // Expose public attributes before Path initialization
                 this.svg = svgView.svg;
                 this.path = svgView.path;
                 this.trail = svgView.trail;
@@ -469,7 +427,6 @@
                     throw new Error(DESTROYED_ERROR);
                 }
 
-                // Don't crash if stop is called inside step function
                 if (this._progressPath === undefined) {
                     return;
                 }
@@ -487,7 +444,6 @@
                 }
 
                 if (!this._progressPath._tweenable) {
-                    // It seems that we can't pause this
                     return;
                 }
 
@@ -504,7 +460,6 @@
                 }
 
                 if (!this._progressPath._tweenable) {
-                    // It seems that we can't resume this
                     return;
                 }
 
@@ -555,12 +510,10 @@
                 }
 
                 if (this.text === null) {
-                    // Create new text node
                     this.text = this._createTextContainer(this._opts, this._container);
                     this._container.appendChild(this.text);
                 }
 
-                // Remove previous text and add new
                 if (utils.isObject(newText)) {
                     utils.removeChildren(this.text);
                     this.text.appendChild(newText);
@@ -574,8 +527,6 @@
                 this._initializeSvg(svg, opts);
 
                 var trailPath = null;
-                // Each option listed in the if condition are 'triggers' for creating
-                // the trail path
                 if (opts.trailColor || opts.trailWidth) {
                     trailPath = this._createTrail(opts);
                     svg.appendChild(trailPath);
@@ -601,13 +552,10 @@
             };
 
             Shape.prototype._createTrail = function _createTrail(opts) {
-                // Create path string with original passed options
                 var pathString = this._trailString(opts);
 
-                // Prevent modifying original
                 var newOpts = utils.extend({}, opts);
 
-                // Defaults for parameters which modify trail path
                 if (!newOpts.trailColor) {
                     newOpts.trailColor = '#eee';
                 }
@@ -618,8 +566,6 @@
                 newOpts.color = newOpts.trailColor;
                 newOpts.strokeWidth = newOpts.trailWidth;
 
-                // When trail path is set, fill must be set for it instead of the
-                // actual path to prevent trail stroke from clipping
                 newOpts.fill = null;
 
                 return this._createPathElement(pathString, newOpts);
@@ -651,7 +597,6 @@
                     }
 
                     utils.setStyles(textContainer, textStyle);
-                    // Default text color to progress bar's color
                     if (!textStyle.color) {
                         textContainer.style.color = opts.color;
                     }
@@ -661,10 +606,8 @@
                 return textContainer;
             };
 
-            // Give custom shapes possibility to modify text element
             Shape.prototype._initializeTextContainer = function (opts, container, element) {
-                // By default, no-op
-                // Custom shapes should respect API options, such as text.style
+
             };
 
             Shape.prototype._pathString = function _pathString(opts) {
@@ -705,10 +648,7 @@
             module.exports = Shape;
 
         }, { "./path": 5, "./utils": 9 }], 8: [function (require, module, exports) {
-            // Square shaped progress bar
-            // Note: Square is not core part of API anymore. It's left here
-            //       for reference. square is not included to the progressbar
-            //       build anymore
+
 
             var Shape = require('./shape');
             var utils = require('./utils');
@@ -758,13 +698,10 @@
             module.exports = Square;
 
         }, { "./shape": 7, "./utils": 9 }], 9: [function (require, module, exports) {
-            // Utility functions
 
             var PREFIXES = 'Webkit Moz O ms'.split(' ');
             var FLOAT_COMPARISON_EPSILON = 0.001;
 
-            // Copy all attributes from source object to destination object.
-            // destination object is mutated.
             function extend(destination, source, recursive) {
                 destination = destination || {};
                 source = source || {};
@@ -785,11 +722,6 @@
                 return destination;
             }
 
-            // Renders templates with given variables. Variables must be surrounded with
-            // braces without any spaces, e.g. {variable}
-            // All instances of variable placeholders will be replaced with given content
-            // Example:
-            // render('Hello, {message}!', {message: 'world'})
             function render(template, vars) {
                 var rendered = template;
 
@@ -807,7 +739,7 @@
             }
 
             function setStyle(element, style, value) {
-                var elStyle = element.style;  // cache for performance
+                var elStyle = element.style;
 
                 for (var i = 0; i < PREFIXES.length; ++i) {
                     var prefix = PREFIXES[i];
@@ -819,14 +751,10 @@
 
             function setStyles(element, styles) {
                 forEachObject(styles, function (styleValue, styleName) {
-                    // Allow disabling some individual styles by setting them
-                    // to null or undefined
                     if (styleValue === null || styleValue === undefined) {
                         return;
                     }
 
-                    // If style's value is {prefix: true, value: '50%'},
-                    // Set also browser prefixed styles
                     if (isObject(styleValue) && styleValue.prefix === true) {
                         setStyle(element, styleName, styleValue.value);
                     } else {
@@ -851,8 +779,6 @@
                 return Object.prototype.toString.call(obj) === '[object Array]';
             }
 
-            // Returns true if `obj` is object as in {a: 1, b: 2}, not if it's function or
-            // array
             function isObject(obj) {
                 if (isArray(obj)) {
                     return false;
@@ -875,7 +801,6 @@
                 return Math.abs(a - b) < FLOAT_COMPARISON_EPSILON;
             }
 
-            // https://coderwall.com/p/nygghw/don-t-use-innerhtml-to-empty-dom-elements
             function removeChildren(el) {
                 while (el.firstChild) {
                     el.removeChild(el.firstChild);

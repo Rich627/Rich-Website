@@ -258,4 +258,543 @@
                                 <span class="small">
                                     <img src="https://img.shields.io/badge/Supervised Learning-C93532.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFEUlEQVR4nO2bWYgdRRSG27iMyRgXGCX6YMQlhIgPckFUHJEoiEETFZcXTUQTw7wpcUGjElHRuOFL1An45K5owCWIiEgiuHBdIDIqkic1ccGg0ZCoYz45zmmolN23q7urepl7f6iHW7e67+mvq05VnTo3igYaqFUC5gNPAz8CfwITwK3AUNRvAs4HdpGs94FZUb8IOBL4ld56rG4jrwbGq+iuwC1ka2etQwf4WA05tYLfeh43zQ9tSy8ju2pEp4LfEkfqohNC29IUIGMOMLYDM0LbYho1Vx7eKBMVAhkGvs0AclNoO0yDjgX+TjGkU5ENHV1/JOnZqnvHMPCGDpO47CoKBLgSeAF4EDgsx3VHAWuBz4CtwFvAFcB+Ud2ioA8Bllhv9/VwVjq9mNG6gYxbQCbreMPAGv39ibqBjFlAPvFiUDEYfwEX1w1kf+AB4BvgbeAkLwYVg3FpK9chgWBc4vvm3TYB8Q4DmAUcYZTP2wLE+zABjukRiygNRBZVwDKNa/yhZTOwtOyCK4jPAA7XxdAOo0z6AAIcCGwgXa9Km0Y50JA+hKnVqq2fNTQoPUV0f6NhZAFRf3MX8A7wInCB3cboeXsSgGzT78/Tz7ulbdI9GgGjFxAdAnHwyNSY2U7bXpQyTLYZbcSviC6MmgojA4iEFtNCfAdYbZc5AHlG666JmgojA8hDpGue1XZhLyCyxwG+0Lpzo6bCyACyMuUhJZ4y02p7UEqMIway3HCyQ42FkQFkWPcpth4x2xntZa1hS6b1dcA/+vm6pGvLwgBO0QD2T3rwJb1xlbwol3ORH1LefNIsc7QGgH5ROKtt/2G1X5USkZO1zu2BYCzW2StJ7wIHZwHZ7gqkxDHlw8B7Wh4FTg4EYw7wO721tjWbO0r6DOA2svVb5tBpAhAfDlSHs9+DL2oA4ms2CXLwRcVAfE6tQQ6+qPbkzus6I8jBFxUBCbXo8n7wRQVAXGHo/uk54G5gdvCDL92md/WiuOwJCSQHjEXW2305hD2VhhDLDBNdzJnaGVUhYDZwvFG2hACS12ck7IU2R3WIAD6kiAPVAPU9wJdyTiwvK5oOQAh5iNQ2ILQdhueoe2XBHdnSS2xWww03SCqEt0QbPACpGMailNXpp8CC2oFQPYxJe3o2YiISyDoxzw0PAd70mFJV9TD5LqFndDXw9aF+3lhL0h3FptYR4Ald+2ySGKtr1pH6jCR19fvjdNUt8ds5eaF0yqRlFoQhp4BfJzzQHY7X39wLiLaJe8lC12cp7UP0aDP3MAFWpDzQbpcQH3CjA5CPtG60EiBM+aC9BQPC9l4l9eAr5frRXkDEmeoRhJRD89hWtodcBpzt0ta6bnnJHjJDp9b/AZH8NmNPtj6vbXUFiGYCXyU80Ooc91igU6sNNJ6Kt+RJIG5CCHHEmmWuLXAPGRobdejGkmGyvjSMNibdWYdU5wBnFfYZurgZB14yyo42AvEiDQjtTXFu/QdEBJwGXG6UrX0NZLr4kGBiAGRfDYCkA5mwwgLTqTwVuYqp/NPpru/z/u9lrnVWc7qRJGeGCiR+ia4yzfp7jfRts/4Vrb8vJeRwlVUfy6yTNug1LrbE//QaN+pGnIEkSXPL9skztRJ0X7Pqr4+NsOqf1PqVjol+/8mq69jb/Axb4ljNmsiXgCFNsttg1c/TzdWdVv2Zmrq0IgGU1J9h1T8usO03p/GMD1Ly4tY52rJEY6yLSyAYKOpn/QuDZBozsZ1iwgAAAABJRU5ErkJggg==&style=for-the-badge&logoColor=white&style=social"
                                         class="badge-img" />
-                                    <img src="https://img.shields.io/badge/Unsupervised Learning-3DC383.svg?logo=data:image/png;base64,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&logoColor=white"
+                                        <img src="https://img.shields.io/badge/Computer Vision-800080.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR4nL2UMW4CMRBFt0A0cSioI3EUNlyHA6Cg9GyOwQ0Q5ARJtRego9qQHIAi5UOjTLGyxvYuwfslN/7z5489YxfFEMDAXXMwlEFxJ9DVAJgCS+AdaIBfXY3uCTftbQCMgBfgQhoXjR11uhHgCajpj1q0qbubASdDvAPmwIOuEtgbcaKdhZI74GiIVpGC1ka85HBW8NaqvPjjxsAb8A2cgUr2lDsYuq2fXI5sYa68JPRRKfcc0JZtg89AkFNeKvfxo9xjQPvRx+BscF/KTboYlLFjYl/RRrlFTJtq8r7V5EpP4jdZXnS8yYkxXUfG9LXzmCYe2kGnxelaBCoPP7SsXwWKbJ8d/kbu7/q/IGTQxq1JsXJkN8iJK6M40Ig/LoSBAAAAAElFTkSuQmCC&style=for-the-badge&logoColor=white&style=social"
+                                        class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Large Language Model-B01940.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACjUlEQVR4nMWVXWjOYRjGN1tb+Vx2ojHCjlbmZCdeTnzUduBAw8EwtRNq5COM2AEpH0VJEbGVSNoBsXqViA2ltKMdTAkh37xl8pG1/XTNVZ49+78aU+56e//P/Tz3dT3355OT8z8FyAMagA7gC/ABuAos/hfgY4Hb/BQRHAJOAU+sOwnMBGYDhX9DcBH4CqyM9GXASwbLN+ACMGO44ItsuC3QjQZ2O1SfgRPAMoUL2AtkgPdAxe+A5wH3DS6gAutrgWdAP3AeKE2wnQI8Ah4nhgxYCvTafYF1Wl9jQhHPDZK/BjgHVAYYC3x2VQxeAnwEbgETgJv6eW+DjYq9rgK6Ai/7gBZgEpALvFYxxARNwHdgqtchwSaDpYC0v5/b4/HAQSe5B2gEHijhMcEN3T5YhwRbDNrnRL5zKI8ARUFlXQ6qal9MoDq/loWg0UZHFSZgInDMujdAvULjs6vtTVtM0Ay8AvK9Tvu2dcBOgw1UVJBkySf/3wPKvbfeuuqQoNrKdV6X2ygEGSD3foF1u3wJXSbtvXwnujn24ordq/N6lN1XGCTHHZ5ih0uyPQ6p19eB9phgP7/kkuaM9UVOaK87NeOES7ZmIbgjkpigFeh2UnvszQFgnJtNpYnzM8ffmxOKYppLvikmOO1E57ppWnxTNRNuriqfVagkG0MCT+AON21JTKBkSeYHukrgrMdCnnWpYF7VWNcJPPUs0u2XDAL3oUIPqofA5IT9Ug+6fs+q2sBOYx1XXmoIeABS4Vcr48QuB1YAZzyiFa49Gt2BzQ6DL8wKHJFM9+OhJIfyIn5Q3Lm6feuwwCNjNdMsgboHJIqxvg8Dd61rB8b8MUECobq9DXjrEKpa1qohRww+EvkBv1+bKH737dgAAAAASUVORK5CYII=&style=for-the-badge&logoColor=white&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                                <li>Frameworks:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/TensorFlow-FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 col-md-7 skill-set">
+                            <div class="skill-set__content">
+                                <div class="icon d-block fas fa-chart-bar"></div>
+                                <h3>Data Analytics & Business Intelligence</h3>
+                                <ul>
+                                    <li>Data Analysis:
+                                        <span class="small">
+                                            <img src="https://img.shields.io/badge/Pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/NumPy-013243.svg?style=for-the-badge&logo=NumPy&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white&style=social"
+                                                class="badge-img" />
+                                        </span>
+                                    </li>
+                                    <li>Business Intelligence
+                                        <span class="small">
+                                            <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/AWS_QuickSight-6642f5.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI1NiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB3aWR0aD0iMjU2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xOS4yIDE5LjJoMjE3LjZ2MzguNGwtMTA4LjggMTA4Ljh2LTg5LjZsLTEwOC44IDEwOC44em0tNi40LTE5LjJjLTcuNjggMC0xMi44IDUuMTItMTIuOCAxMi44djIzMC40YzAgNy42OCA1LjEyIDEyLjggMTIuOCAxMi44aDIzMC40YzcuNjggMCAxMi44LTUuMTIgMTIuOC0xMi44di0yMzAuNGMwLTcuNjgtNS4xMi0xMi44LTEyLjgtMTIuOHoiIGZpbGw9IiMwMGI3ZjQiLz48L3N2Zz4=&logoColor=white&style=social"
+                                                class="badge-img" />
+                                        </span>
+                                    </li>
+                                    <li>Visualizations:
+                                        <span class="small">
+                                            <img src="https://img.shields.io/badge/Seaborn-FF5733.svg?logo=data:image/png;base64,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&style=for-the-badge&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Plotly-19B025.svg?style=for-the-badge&logo=plotly&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Matplotlib-8E35EF.svg?logo=data:image/png;base64,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&style=for-the-badge&logoColor=white&style=social"
+                                                class="badge-img" />
+                                        </span>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 skill-set mt-auto text-end">
+                            <div class="skill-set__pic">
+                                <img src="static/img/skill-set/da.png"
+                                    alt="data analytics & business intelligence illustration" class="img-fluid-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-48 skill-set mt-auto text-start">
+                        <div class="skill-set__pic">
+                            <img src="static/img/skill-set/cs.webp" alt="programming & databases illustration"
+                                class="img-fluid-1">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 skill-set">
+                        <div class="skill-set__content">
+                            <div class="icon d-block fas fa-laptop-code"></div>
+                            <h3>Computer Science & Developing</h3>
+                            <ul>
+                                <li>Languages:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white&style=social"
+                                            class="badge-img" class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/-Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white&style=social"
+                                            calss="badge-img" class="badge-img" />
+                                        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                                <li>DevOps:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/-Git-black.svg?style=for-the-badge&logo=git&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-web-services&logoColor=white&style=social"
+                                            class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white&style=social"
+                                            class="badge-img" />
+
+                                    </span>
+                                </li>
+                                <li>OS:
+                                    <span class="snall">
+                                        <img src="https://img.shields.io/badge/Mac%20OS-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white&style=social"
+                                            calss="badge-img" class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white&style=social"
+                                            calss="badge-img" class="badge-img" />
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-65 skill-set">
+                        <div class="skill-set__content">
+                            <div class="icon d-block fas fa-database"></div>
+                            <h3>Data Engineering & Big Data</h3>
+                            <ul>
+                                <li>Data Mining:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/Web%20Crawler-FF5733.svg?logo=openbugbounty&style=for-the-badge&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                                <li>Database:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/AWS%20Aurora-3725D9.svg?logo=data:image/png;base64,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&style=for-the-badge&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white&style=social"
+                                                class="badge-img" />
+                                            <img src="https://img.shields.io/badge/AWS%20DynamoDB-FF5733.svg?style=for-the-badge&logo=amazondynamodb&logoColor=white&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                                <li>NoSQL & Data Lake:
+                                    <span class="small">
+                                        <img src="https://img.shields.io/badge/DataBricks-FF5733.svg?style=for-the-badge&logo=databricks&logoColor=white&style=social"
+                                            class="badge-img" />
+                                        <img src="https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black&style=social"
+                                            class="badge-img" />
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 skill-set mt-auto text-end">
+                        <div class="skill-set__pic">
+                            <img src="/static/img/skill-set/de.webp" alt="cloud architecting & big data illustration"
+                                class="img-fluid-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill-levels" class="skill-levels">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="display-3 fw-bold">Skill Levels</h1>
+                    <div class="heading-line"></div>
+                </div>
+            </div>
+            <div class="wrapper image-wrapper">
+                <div class="container inner">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <div class="progressbar circle blue" data-value="85"></div>
+                                    <h5 class="speed_bar_title">Data Science</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <div class="progressbar circle green" data-value="75"></div>
+                                    <h6 class="speed_bar_title">Data Analytics</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <div class="progressbar circle red" data-value="80"></div>
+                                    <h5 class="speed_bar_title">Data Engineering</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="row text-center">
+                                <div class="col-12">
+                                    <div class="progressbar circle yellow" data-value="75"></div>
+                                    <h5 class="speed_bar_title">Computer Science</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <img class="github-status"
+                                src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rich627&theme=buefy" />
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <img class="github-status"
+                                src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Rich627&theme=buefy&utcOffset=8" />
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <img class="github-status"
+                                src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rich627&theme=buefy" />
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <img class="github-status"
+                                src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rich627&theme=buefy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- EXPERIENCE -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 200">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,128L144,288L288,256L432,320L576,160L720,224L864,128L1008,256L1152,128L1296,32L1440,160L1440,320L1296,320L1152,320L1008,320L864,320L720,320L576,320L432,320L288,320L144,320L0,320Z">
+            </path>
+        </svg>
+        <section class="section" id="resume">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="display-3 fw-bold">Experience</h1>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 m-15px-tb d-flex">
+                        <div class="resume-box align-self-lg-stretch">
+                            <ul>
+                                <!-- Work Experience Column -->
+                                <li class="experience-item">
+                                    <div class="icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span class="time">Oct 2024 - Present</span>
+                                    <h5>Solutions Architect, Cloud - iKala Interactive Media</h5>
+                                    <p>Working as a Solutions Architect to design and implement cloud solutions.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span class="time">July 2024 - Present</span>
+                                    <h5>Data Scientist Intern, IT-AI - Advantech</h5>
+                                    <p>Achieved 90% accuracy in part demand forecasting using Amazon Forecast. Developed a multi-agent system with LangGraph and built a video translation platform integrating open-source LLMs with Gradio.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span class="time">Mar 2024 - Present</span>
+                                    <h5>Cloud Ambassador, Tech Support - AWS</h5>
+                                    <p>Assisted over 80 students in obtaining AWS certifications through YouTube courses. Conducted workshops on CloudFront and Lambda@Edge, achieving 4.9 satisfaction rating. Engineered microservice architecture for email workflow automation, reducing processing time by 40%.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span class="time">Mar 2024 - May 2024</span>
+                                    <h5>Cloud Developer Intern, AI&Data - eCloudvalley</h5>
+                                    <p>During my internship, I utilized AWS Glue and PySpark to build a data pipeline and perform a series of ETL processes, reducing data processing time by 50%. I also leveraged AWS Personalize to enhance marketing campaigns and recommendation systems, boosting targeted promotion accuracy by 20%. Additionally, I constructed a recommendation chatbot with LangChain and Amazon Bedrock LLM, increasing customer engagement and satisfaction by 30%.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <span class="time">Aug 2023 - Feb 2024</span>
+                                    <h5>QA Engineer Intern, QA-AI - CyberLink</h5>
+                                    <p>In this role, I identified over 100 critical bugs through manual testing of BVT, SVT, and SFT for FaceMe Product. I conducted comprehensive API testing for FaceMe Security, enhancing endpoint functionality by 35%. Furthermore, I produced detailed test reports, expediting issue resolution and improving overall product quality.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 m-15px-tb d-flex">
+                        <div class="resume-box align-self-stretch">
+                            <ul>
+                                <!-- Activities & Achievements Column -->
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <span class="time">Oct 2024</span>
+                                    <h5>AWS Community Day Taiwan</h5>
+                                    <p>Hosted SageMaker workshop on ML fundamentals and LLM fine-tuning with QLoRA, achieving 5.0/5.0 attendee satisfaction. Led hands-on sessions covering model deployment and optimization techniques, empowering participants with practical ML skills.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <span class="time">Aug 2024</span>
+                                    <h5>AWS Summit Taiwan</h5>
+                                    <p>Provided technical support at the Card Crash booth, assisting attendees in challenging and exploring AWS's classic architectures. Facilitated interactive learning sessions and guided participants through complex cloud scenarios, resulting in enhanced understanding of AWS services.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <span class="time">May 2024</span>
+                                    <h5>Taiwan Generative AI Hackathon</h5>
+                                    <p>Deployed resources using Serverless Framework for scalable deployment. Established automated data pipeline for PDF embedding into knowledge base, implemented LLM logic using LangChain, and developed an interactive Gradio frontend interface. The solution demonstrated innovative use of AI technologies in practical applications.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <span class="time">Feb 2023 - Jun 2023</span>
+                                    <h5>2023 Future Ready Skills Competition - Microsoft</h5>
+                                    <p>During the Microsoft competition, we harnessed Azure services to develop a demo showcasing key functions for the Assistive Shopping App for the Visually Impaired. This app offered product detection, information extraction from labels, and text-to-speech conversion, enhancing the shopping experience for the visually impaired.</p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <span class="time">Jan 2023</span>
+                                    <h5>AWS Serverless Data Analysis Workshop - AWS</h5>
+                                    <p>I gained valuable experience in the AWS Serverless Data Analysis Workshop, covering S3-based serverless analysis with Athena, visualization via QuickSight, serverless ETL and data discovery with Glue, and data analysis in S3 using Redshift Spectrum.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Project -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 200">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,128L144,288L288,256L432,320L576,160L720,224L864,128L1008,256L1152,128L1296,32L1440,160L1440,320L1296,320L1152,320L1008,320L864,320L720,320L576,320L432,320L288,320L144,320L0,320Z">
+            </path>
+        </svg>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="row text-center mt-5">
+                    <h1 class="display-3 fw-bold" title="View More">Projects</a></h1>
+                    <div class="heading-line"></div>
+                    <p class="lead-1">
+                        Part of learning samples and personal projects. <a href="https://github.com/Rich627">View more.</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <!-- Project 1:AI Music Generation -->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/AI-music">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/AI_Music.jpg" alt="AI Music Generation Picture"
+                                    title="AI Music Generation" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>AI Music Generation</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 2: Parking Lot Management System-->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/SQL_Project">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/parking_lot.webp" alt="Parking Lot Picture" title="Parking Lot"
+                                    class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>Parking Lot Management System</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 3: 2023 Hottest Motorcycle-->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/2023-Hottest-Motorcycle">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/hottest_moto.png" alt="2023 Hottest Motorcycle"
+                                    title="2023 Hottest Motorcycle" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>2023 Hottest Motorcycle</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 4: Campus Restaurant Order Machine-->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/Order_Machine">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/order_machine.jpeg" alt="Campus Restaurant Order Machine"
+                                    title="Campus Restaurant Order Machine" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>Campus Restaurant Order Machine</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 5: Mathematical Problem Classification-->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/Math-Problem-Categorization">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/Math-Problem-Categorization.jpeg"
+                                    alt="Math Problem Categorization" title="Math Problem Categorization" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>Math Problem Categorization</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 6: COVID 19 Xray Classification-->
+                    <div class="col-lg-4 col-md-5">
+                        <a href="https://github.com/Rich627/COVID-19-Xray">
+                            <div class="portfolio-box shadow">
+                                <img src="static/img/project/COVID-19-Xray.jpeg" alt="COVID 19 Xray Classification"
+                                    title="COVID 19 Xray Classification" class="img-fluid">
+                                <div class="portfolio-info">
+                                    <div class="caption">
+                                        <h4>COVID-19 Xray Classification</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE FOOTER -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- MOBILE NUMBER -->
+                    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                        <div class="contact-box__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                        </div>
+                        <div class="contact-box__info">
+                            <a href="tel:936-488-138" class="contact-box__info--title">+886 936488138</a>
+                            <p class="contact-box__info--subtitle">Phone</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                        <div class="contact-box__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>
+                        </div>
+                        <div class="contact-box__info">
+                            <a href="mailto:rich.liu627@gmail.com"
+                                class="contact-box__info--title">rich.liu627@gmail.com</a>
+                            <p class="contact-box__info--subtitle">Email</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                        <div class="contact-box__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        </div>
+                        <div class="contact-box__info">
+                            <a href="https://www.google.com/maps/place/New Taipei City" class="contact-box__info--title">New
+                                Taipei City, Taiwan</a>
+                            <p class="contact-box__info--subtitle">Address</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COPYRIGHT INFO -->
+            <div class="footer-bottom pt-2 pb-2">
+                <div class="container">
+                    <div class="row text-center text-white">
+                        <div class="col-12">
+                            <div class="footer-bottom__copyright">
+                                &COPY; Copyright 2023 Richie Liu</a>
+                                | Created by Richie Liu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- JQuery JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="static/js/name.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="static/js/progressbar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+        <script src="static/js/speedNumber.js"></script>
+
+    </body>
+
+    </html>

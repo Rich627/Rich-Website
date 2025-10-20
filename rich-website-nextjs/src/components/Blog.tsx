@@ -28,7 +28,14 @@ export default function Blog() {
         const data = await response.json();
 
         if (data.status === 'ok') {
-          const formattedArticles = data.items.slice(0, 6).map((item: any) => ({
+          const formattedArticles = data.items.slice(0, 6).map((item: {
+            title: string;
+            link: string;
+            pubDate: string;
+            description?: string;
+            thumbnail?: string;
+            categories?: string[]
+          }) => ({
             title: item.title,
             link: item.link,
             pubDate: item.pubDate,

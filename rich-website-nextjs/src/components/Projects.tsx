@@ -1,5 +1,4 @@
 import Image from 'next/image'; // Using Next/Image for optimized project images
-import Link from 'next/link'; // Can be used if internal navigation for projects is added later
 
 const projectsData = [
   {

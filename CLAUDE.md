@@ -4,18 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is Rich's personal portfolio website repository containing two implementations:
-
-1. **Legacy Static Site** (`index.html` in root): A static HTML/CSS/JavaScript portfolio website using Bootstrap 5
-2. **Next.js Application** (`rich-website-nextjs/`): A modern Next.js 15 rewrite with React 19, TypeScript, and Tailwind CSS
+This is Rich Liu's personal portfolio website - a modern Next.js 15 application with React 19, TypeScript, and Tailwind CSS.
 
 ## Development Commands
 
-### Next.js Application (rich-website-nextjs/)
-
 ```bash
-cd rich-website-nextjs
-
 # Development server (with Turbopack)
 npm run dev
 
@@ -31,41 +24,38 @@ npm run lint
 
 The development server runs on http://localhost:3000
 
-### Static Site (Root)
-
-The static site (`index.html`) is deployed directly to AWS S3 via GitHub Actions when pushing to `main` branch.
-
 ## Architecture
 
-### Next.js Application Structure
+### Application Structure
 
 - **Entry Point**: `src/app/page.tsx` - Composes all components into the homepage
 - **Layout**: `src/app/layout.tsx` - Root layout with metadata, fonts (Geist Sans/Mono), Bootstrap, Font Awesome, and Google Analytics
 - **Components** (`src/components/`):
   - `Navbar.tsx` - Navigation with social links
-  - `Intro.tsx` - Hero section with introduction
+  - `Intro.tsx` - Hero section with introduction and AWS Community Builder badge
   - `Certificates.tsx` - Certification badges showcase
   - `SkillSet.tsx` - Skills overview with badges
-  - `SkillLevels.tsx` - Detailed skill proficiency levels (likely uses react-circular-progressbar)
+  - `SkillLevels.tsx` - Detailed skill proficiency levels
   - `Experience.tsx` - Work experience timeline
-  - `Projects.tsx` - Portfolio projects showcase
+  - `Projects.tsx` - Portfolio projects showcase with NDA handling
+  - `Blog.tsx` - Medium articles integration
   - `Footer.tsx` - Contact information and footer
 
 ### Static Assets
 
-Located in `rich-website-nextjs/public/`:
+Located in `public/`:
 - `/css/` - Custom styles (style.css, redesign.css)
 - `/img/` - Images organized by type:
   - `certifiacate/` - Certification badges (AWS, GCP, Azure)
   - `logo/` - Brand logos and intro image
-  - `project/` - Project screenshots
+  - `project/` - Project screenshots (ai-psy-test, aws-educate-tpet, gogoro-ai, taylor-swift-workshop, advantech-rd, viewsonic-caf)
   - `skill-set/` - Skill category icons
   - `icon/` - UI icons
 - `/js/` - Legacy JavaScript files (progressbar.js, speedNumber.js, name.js)
 
 ### Styling Approach
 
-The Next.js app uses a **hybrid styling approach**:
+The app uses a **hybrid styling approach**:
 - **Tailwind CSS v4** for utility-first styling
 - **Bootstrap 5.3.2** loaded via CDN for layout and components
 - **Custom CSS** files in `/public/css/` for legacy styles
@@ -80,38 +70,55 @@ The Next.js app uses a **hybrid styling approach**:
 
 ## Deployment
 
-### Static Site Deployment
+### AWS S3 Static Website Hosting
 
-Automated via GitHub Actions (`.github/workflows/deploy.yml`):
+The site is hosted on AWS S3 as a static website. Deployment can be done using AWS CLI:
+
+```bash
+# Build the static site
+npm run build
+
+# Sync to S3 bucket
+aws s3 sync out/ s3://rich-liu.com --region ap-northeast-1
+
+# Or use AWS CLI to update bucket configuration
+```
+
+**S3 Configuration:**
+- Bucket: `rich-liu.com`
+- Region: `ap-northeast-1`
+- Type: Static website hosting
+
+### GitHub Actions
+
+Automated deployment via GitHub Actions (`.github/workflows/deploy.yml`):
 - Triggers on push to `main` branch
-- Syncs root directory to S3 bucket `rich-liu.com`
-- AWS region: `ap-northeast-1`
 - Requires secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
 
-### Next.js Deployment
+## Key Features
 
-The Next.js app is not yet configured for deployment. Standard Next.js deployment options apply (Vercel, AWS Amplify, etc.).
+### Portfolio Content
 
-## Key Considerations
+- **AWS AI Community Builder** badge prominently displayed with link
+- **6 Featured Projects** including production systems at AWS Community Day Taiwan, AWS Educate, Gogoro, Advantech, and ViewSonic
+- **9+ Certifications** from AWS, GCP, and Azure
+- **25+ Technical Skills** across AI/ML, cloud, and data engineering
+- **NDA Handling** for proprietary projects (displays "Proprietary Project - Under NDA" badge)
 
-### Legacy vs. Modern Code
+### Recent Updates
 
-- The root `index.html` (~36K+ lines) is a large legacy file with extensive inline content
-- The Next.js version is a componentized rewrite with better maintainability
-- Both versions showcase the same portfolio content (certificates, skills, projects)
-
-### Migration Status
-
-The repository appears to be in transition:
-- Git status shows deleted static assets from root (images, CSS, JS)
-- These assets have been moved to `rich-website-nextjs/public/`
-- The Next.js app is the future direction
+- Added AWS AI Community Builder badge to Intro section
+- Updated Projects component with current portfolio
+- Removed images from Blog component for cleaner layout
+- Logo-only navbar branding
+- Improved project card alignment with flexbox layout
+- Added object-contain for better image visibility
 
 ### Content Focus
 
 The portfolio emphasizes:
-- Cloud certifications (GCP Professional Cloud Architect, AWS, Azure)
-- Data Science and Machine Learning expertise
-- Solution Architecture experience at iKala
-- Multiple technical projects across AI, data engineering, and cloud
-- 另外我現在是用 s3 host static website 你可以用 aws command 去改設定把網站部署上去
+- Generative AI and Machine Learning solutions
+- Cloud Architecture expertise (AWS, GCP, Azure)
+- Data Engineering and Analytics
+- Production-grade AI/ML deployments
+- Enterprise solutions and community contributions

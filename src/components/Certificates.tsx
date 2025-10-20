@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const certificatesData = [
   {
     href: "https://www.credly.com/badges/84e8e000-b8a2-438e-b59a-97bf38bc6f8c/public_url",

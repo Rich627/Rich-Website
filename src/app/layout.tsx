@@ -75,6 +75,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ backgroundColor: '#0a0a0a', margin: 0, padding: 0 }}
       >
         {children}
         <Script

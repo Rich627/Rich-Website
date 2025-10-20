@@ -1,0 +1,79 @@
+/* STYLES FOR INTRO SECTION REDESIGN */
+.intro-section {
+    min-height: 90vh; /* Make it taller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* Adjust if navbar is fixed and tall */
+    padding-bottom: 0; /* SVG will act as bottom padding visually */
+    background-color: #f8f9fa; /* A light, clean background */
+    color: #333; /* Darker text for better contrast */
+}
+
+.intro-section .display-2--intro {
+    font-size: 2.5rem; 
+    font-weight: 300; 
+    color: #555;
+}
+
+.intro-section .display-2--name {
+    font-size: 5rem; 
+    font-weight: 700; 
+    display: block;
+    margin: 10px 0;
+    color: #007bff; /* Primary color */
+}
+
+.intro-section .display-2--description {
+    font-size: 1.25rem; 
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 600px; 
+    margin: 20px auto; /* Adjusted margin for better spacing */
+}
+
+.intro-section .intros.text-end img {
+    max-width: 400px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+.intro-section .intros.text-start {
+    text-align: left !important; 
+}
+
+.intro-section .intro-section-divider {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it takes full width */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-section {
+        min-height: auto; /* Adjust height for smaller screens */
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+    .intro-section .display-2--name {
+        font-size: 3.5rem;
+    }
+    .intro-section .display-2--intro {
+        font-size: 1.8rem;
+    }
+    .intro-section .display-2--description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+    .intro-section .intros.text-start,
+    .intro-section .intros.text-end {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    .intro-section .intros.text-end img {
+        max-width: 300px; 
+    }
+}
+/* END OF STYLES FOR INTRO SECTION REDESIGN */ 

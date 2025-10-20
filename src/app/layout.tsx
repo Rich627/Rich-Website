@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rich's Portfolio",
-  description: "Rich's Portfolio",
+  title: "Richie's Portfolio",
+  description: "Richie's Portfolio - AI/ML Engineer & Cloud Architect specializing in Generative AI, Machine Learning, and Cloud Solutions",
   icons: {
     icon: "/img/logo/rich-low-resolution-logo-white-on-transparent-background.png",
   },

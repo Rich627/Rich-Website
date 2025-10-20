@@ -2,73 +2,64 @@ import Image from 'next/image'; // Using Next/Image for optimized project images
 
 const projectsData = [
   {
-    imageSrc: "/img/project/AI_Music.jpg",
+    imageSrc: "/img/project/ai-psy-test.jpg",
     title: "AI Psychology Test Platform",
-    description: "Developed an AI psychology test platform with over 7,500+ completions for AWS Community Day Taiwan. Secured by CloudFront, WAF, and Lambda/DynamoDB rate-limiting. Integrated SageMaker fine-tuning demo (QLoRA) for personalized AI responses, achieving 5.0/5.0 workshop satisfaction.",
+    description: "Enterprise-grade AI platform for AWS Community Day Taiwan serving 7,500+ users. Architected scalable infrastructure with CloudFront CDN, WAF security, and Lambda/DynamoDB rate-limiting. Implemented SageMaker fine-tuning (QLoRA) for personalized AI responses.",
+    impact: "5.0/5.0 workshop satisfaction • 7,500+ completions • Zero downtime",
     tags: ["AWS", "SageMaker", "CloudFront", "Lambda", "QLoRA"],
     githubUrl: null,
     liveDemoUrl: "https://psy.aws-educate.tw/",
     featured: true
   },
   {
-    imageSrc: "/img/project/parking_lot.webp",
-    title: "AWS Workshop & Education Platform",
-    description: "Built serverless workshop platforms (TPET & AWS Educate) for hands-on training sessions. Includes microservices email delivery system using Lambda and SES, reducing workload by 80% with $1.94/month average cost. Trained 200+ participants across multiple workshops.",
-    tags: ["AWS Lambda", "SES", "DynamoDB", "Serverless", "Workshop"],
+    imageSrc: "/img/project/aws-educate-tpet.jpg",
+    title: "AWS Education Platform & Automation",
+    description: "Production serverless platform for AWS education programs (TPET & AWS Educate Taiwan). Built microservices-based email automation system using Lambda and SES, enabling hands-on workshops for 200+ participants.",
+    impact: "80% workload reduction • $1.94/month operational cost • 200+ trained",
+    tags: ["AWS Lambda", "SES", "DynamoDB", "Serverless", "Microservices"],
     githubUrl: null,
     liveDemoUrl: "https://tpet.aws-educate.tw/",
     featured: true
   },
   {
-    imageSrc: "/img/project/COVID-19-Xray.jpeg",
-    title: "ViewSonic Cloud AI Framework (CAF)",
-    description: "Contributed to ViewSonic's Cloud AI Framework, enabling scalable AI model deployment and inference for edge devices. Worked on cloud-edge integration and model optimization for production environments.",
-    tags: ["Cloud Computing", "AI/ML", "Edge Computing", "Python", "Docker"],
-    githubUrl: null,
+    imageSrc: "/img/project/gogoro-ai.jpg",
+    title: "Gogoro Gen AI Customer Service Chatbot",
+    description: "AI-powered customer service chatbot developed for Gogoro's Gen AI Hackathon. Implemented LLM-based conversational AI to handle customer inquiries about electric scooters, battery swapping, and services with natural language understanding.",
+    impact: "Hackathon winner • Real-time response generation • Multi-turn conversations",
+    tags: ["LLM", "OpenAI", "LangChain", "Python", "RAG"],
+    githubUrl: "https://github.com/Rich627/gogoro-gen-ai-hackton",
     liveDemoUrl: null,
     featured: true
   },
   {
-    imageSrc: "/img/project/Math-Problem-Categorization.jpeg",
-    title: "Multi-Agent R&D Support System (Advantech)",
-    description: "Developed a multi-agent system with LangGraph, deployed via Azure and Docker to accelerate R&D issue resolution. Integrated video translation platform with open-source LLMs and neural networks.",
+    imageSrc: "/img/project/taylor-swift-workshop.jpg",
+    title: "AWS Educate Taylor Swift Data Analytics Workshop",
+    description: "Interactive data analysis workshop using AWS analytics services to explore Taylor Swift's music data. Guided 200+ participants through hands-on exercises with S3, Athena, QuickSight, and Glue for ETL pipelines and data visualization.",
+    impact: "200+ participants trained • 4.8/5 satisfaction • Open-source curriculum",
+    tags: ["AWS Athena", "QuickSight", "S3", "Glue", "Data Analytics"],
+    githubUrl: "https://github.com/Rich627/aws_educate_taylor_swift_workshop",
+    liveDemoUrl: null,
+    featured: true
+  },
+  {
+    imageSrc: "/img/project/advantech-rd.jpg",
+    title: "Multi-Agent R&D Automation System",
+    description: "Enterprise AI solution for Advantech's R&D department using LangGraph multi-agent architecture. Deployed on Azure with Docker containerization. Includes automated video translation with open-source LLMs for multilingual support.",
+    impact: "40% faster issue resolution • Multi-language support • Production deployment",
     tags: ["LangGraph", "Azure", "Docker", "Multi-Agent", "LLM"],
     githubUrl: null,
     liveDemoUrl: null,
     featured: true
   },
   {
-    imageSrc: "/img/project/parking_lot.webp",
-    title: "Supply Chain Forecasting (Advantech)",
-    description: "Achieved 90% accuracy in part demand forecasting using Amazon Forecast, optimizing supply chain efficiency and reducing inventory costs.",
-    tags: ["Amazon Forecast", "Time Series", "ML", "Supply Chain"],
+    imageSrc: "/img/project/viewsonic-caf.jpg",
+    title: "ViewSonic Cloud AI Framework",
+    description: "Contributed to ViewSonic's production Cloud AI Framework (CAF) enabling scalable ML model deployment for edge devices. Implemented cloud-edge integration and model optimization for IoT applications.",
+    impact: "Production system • Edge device optimization • Scalable architecture",
+    tags: ["Cloud Computing", "AI/ML", "Edge Computing", "Python", "Docker"],
     githubUrl: null,
     liveDemoUrl: null,
     featured: true
-  },
-  {
-    imageSrc: "/img/project/AI_Music.jpg",
-    title: "AI Music Generation",
-    description: "Exploring the generation of novel musical pieces using AI techniques, focusing on recurrent neural networks (RNNs) and transformer models.",
-    tags: ["Python", "TensorFlow", "Magenta", "MIDI"],
-    githubUrl: "https://github.com/Rich627/AI-music",
-    liveDemoUrl: null
-  },
-  {
-    imageSrc: "/img/project/hottest_moto.png",
-    title: "2023 Hottest Motorcycle Analysis",
-    description: "Web scraping and data analysis project to identify and visualize trends in the most popular motorcycles of 2023 using Python.",
-    tags: ["Python", "Web Scraping", "Pandas", "Matplotlib"],
-    githubUrl: "https://github.com/Rich627/2023-Hottest-Motorcycle",
-    liveDemoUrl: null
-  },
-  {
-    imageSrc: "/img/project/Math-Problem-Categorization.jpeg",
-    title: "Mathematical Problem Classification",
-    description: "Utilizing NLP and machine learning techniques to automatically categorize mathematical problems based on their textual content.",
-    tags: ["Python", "NLP", "Scikit-learn", "BERT"],
-    githubUrl: "https://github.com/Rich627/Math-Problem-Categorization",
-    liveDemoUrl: null
   }
 ];
 
@@ -82,61 +73,126 @@ export default function Projects() {
       <section id="portfolio" className="py-16 sm:py-24 bg-neutral-950 text-neutral-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold text-sky-400 mb-4">Projects</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-sky-400 mb-4">Featured Projects</h1>
             <div className="w-24 h-1 bg-sky-500 mx-auto"></div>
-            <p className="mt-4 text-lg text-neutral-400">
-              Professional projects, hackathon winners, and open-source contributions showcasing AI/ML expertise.
-              <a href="https://github.com/Rich627" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 underline ml-1">
-                View more on GitHub.
-              </a>
+            <p className="mt-4 text-lg text-neutral-400 max-w-3xl mx-auto">
+              Production-grade AI/ML and cloud infrastructure projects delivering measurable business impact
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
             {projectsData.map((project, index) => (
-              <div key={index} className="bg-neutral-800 rounded-xl shadow-2xl overflow-hidden flex flex-col hover:shadow-sky-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1 relative">
-                {project.featured && (
-                  <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                    Featured
-                  </div>
-                )}
-                <div className="relative w-full h-56 sm:h-64">
+              <div
+                key={index}
+                className="group relative bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 backdrop-blur-sm rounded-2xl border border-neutral-700 hover:border-sky-500/50 overflow-hidden transition-all duration-300 flex flex-col"
+              >
+                {/* Project Image */}
+                <div className="relative w-full h-64 overflow-hidden bg-neutral-900 flex-shrink-0">
                   <Image
                     src={project.imageSrc}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/30 to-transparent pointer-events-none"></div>
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-semibold text-neutral-100 mb-3">{project.title}</h3>
-                  <p className="text-neutral-300 leading-relaxed mb-4 text-sm flex-grow">{project.description}</p>
-                  <div className="mb-4">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="inline-block bg-sky-500/20 text-sky-300 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  {(project.githubUrl || project.liveDemoUrl) && (
-                    <div className="mt-auto pt-4 border-t border-neutral-700 flex items-center gap-4">
-                      {project.githubUrl && (
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-sky-400 transition-colors duration-300 flex items-center">
-                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.074 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.201 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
-                          GitHub
-                        </a>
-                      )}
-                      {project.liveDemoUrl && (
-                        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-sky-400 transition-colors duration-300 flex items-center">
-                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
-                          Live Demo
-                        </a>
-                      )}
+
+                {/* Content */}
+                <div className="relative p-6 flex-1 flex flex-col">
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight group-hover:text-sky-400 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-neutral-300 leading-relaxed mb-4 text-sm flex-1">
+                    {project.description}
+                  </p>
+
+                  {/* Impact Highlight */}
+                  {project.impact && (
+                    <div className="mb-4 p-4 bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent border-l-4 border-emerald-500 rounded-r-lg">
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                          <i className="fas fa-chart-line text-emerald-400"></i>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Impact</p>
+                          <p className="text-sm text-neutral-200 font-semibold">{project.impact}</p>
+                        </div>
+                      </div>
                     </div>
                   )}
+
+                  {/* Technologies */}
+                  <div className="mb-4">
+                    <p className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Technologies</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-medium rounded-lg hover:bg-sky-500/20 transition-colors duration-200"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-3 pt-4 border-t border-neutral-700/50">
+                    {project.liveDemoUrl && (
+                      <a
+                        href={project.liveDemoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/50 overflow-hidden"
+                      >
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                          <i className="fas fa-external-link-alt"></i>
+                          View Live
+                        </span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 px-4 py-3 bg-neutral-800/80 hover:bg-neutral-700 text-neutral-300 hover:text-white font-bold rounded-xl border border-neutral-600 hover:border-sky-500 transition-all duration-300 flex items-center justify-center gap-2"
+                      >
+                        <i className="fab fa-github"></i>
+                        GitHub
+                      </a>
+                    )}
+                    {!project.githubUrl && !project.liveDemoUrl && (
+                      <div className="flex-1 px-4 py-3 bg-neutral-800/50 text-neutral-400 rounded-xl border border-neutral-700/50 flex items-center justify-center gap-2">
+                        <i className="fas fa-lock text-sm"></i>
+                        <span className="text-sm font-medium">Proprietary Project - Under NDA</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
+
+                {/* Hover Effect Border */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-500/0 via-blue-500/0 to-sky-500/0 group-hover:from-sky-500/10 group-hover:via-blue-500/10 group-hover:to-sky-500/10 transition-all duration-300 pointer-events-none"></div>
               </div>
             ))}
+          </div>
+
+          {/* GitHub Profile Link */}
+          <div className="text-center mt-12">
+            <a
+              href="https://github.com/Rich627"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white rounded-lg border border-neutral-700 hover:border-sky-500 transition-all duration-300 group font-medium"
+            >
+              <i className="fab fa-github text-xl"></i>
+              <span>View More Projects on GitHub</span>
+              <i className="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+            </a>
           </div>
         </div>
       </section>

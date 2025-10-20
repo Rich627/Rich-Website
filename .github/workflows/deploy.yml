@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: 'rich-website-nextjs/package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./rich-website-nextjs
         run: npm ci
 
       - name: Build Next.js
-        working-directory: ./rich-website-nextjs
         run: npm run build
 
       - name: Configure AWS credentials
@@ -33,10 +30,9 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ap-northeast-1
 
       - name: Deploy to S3
-        working-directory: ./rich-website-nextjs
         run: aws s3 sync out/ s3://rich-liu.com --delete
 
       - name: Invalidate CloudFront cache (optional)

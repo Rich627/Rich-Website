@@ -35,8 +35,5 @@ jobs:
       - name: Deploy to S3
         run: aws s3 sync out/ s3://rich-liu.com --delete
 
-      - name: Invalidate CloudFront cache (optional)
-        run: |
-          if [ -n "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" ]; then
-            aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-          fi
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id E198OF3F75433Q --paths "/*"

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -72,8 +74,14 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <div className="mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center mb-3">
-                <span className="text-white font-bold text-lg">R</span>
+              <div className="mb-3">
+                <Image
+                  src="/img/logo/rich-low-resolution-logo-white-on-transparent-background.png"
+                  alt="Richie Liu"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10"
+                />
               </div>
               <h3 className="text-lg font-bold text-white mb-1">Richie Liu</h3>
               <p className="text-xs text-neutral-400">AI/ML Engineer & Cloud Architect</p>
@@ -143,19 +151,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-neutral-800 pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+          <div className="text-center text-sm text-neutral-500">
             <p>
               &copy; {currentYear} <span className="text-neutral-300 font-semibold">Richie Liu</span>. All rights reserved.
-            </p>
-            <p>
-              Built with{" "}
-              <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
-                Next.js
-              </a>
-              {" & "}
-              <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
-                Tailwind CSS
-              </a>
             </p>
           </div>
         </div>

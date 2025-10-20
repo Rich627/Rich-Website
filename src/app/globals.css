@@ -21,8 +21,11 @@
   }
 } */
 
+html,
 body {
-  background: var(--background);
+  background: var(--background) !important;
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; /* Use Geist Sans */
+  margin: 0;
+  padding: 0;
 }

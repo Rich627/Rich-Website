@@ -18,10 +18,10 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#certificates", label: "Certifications" },
-    { href: "#skill-set", label: "Skills" },
     { href: "#resume", label: "Experience" },
     { href: "#portfolio", label: "Projects" },
+    { href: "#skill-set", label: "Skills" },
+    { href: "#certificates", label: "Certifications" },
     { href: "#blog", label: "Blog" },
     { href: "#footer", label: "Contact" },
   ];
@@ -39,7 +39,7 @@ export default function Navbar() {
           {/* Logo / Brand */}
           <a
             href="#home"
-            className="flex items-center space-x-2"
+            className="flex items-center -ml-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <Image
@@ -49,9 +49,6 @@ export default function Navbar() {
               height={32}
               className="h-8 w-8"
             />
-            <span className="font-bold text-lg text-white">
-              Richie
-            </span>
           </a>
 
           {/* Desktop Navigation - Right aligned */}

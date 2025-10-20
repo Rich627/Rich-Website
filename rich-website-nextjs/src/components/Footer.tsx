@@ -17,7 +17,7 @@ export default function Footer() {
     {
       icon: "fas fa-phone",
       label: "Phone (TW)",
-      value: "+886 936 488 138",
+      value: "+886 936-488-138",
       href: "tel:+886936488138",
     },
     {
@@ -65,118 +65,98 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="footer" className="relative bg-gradient-to-b from-neutral-900 to-neutral-950 text-neutral-400">
-      {/* Decorative Top Border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500 to-transparent"></div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="footer" className="relative bg-neutral-900 text-neutral-400 border-t border-neutral-800">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="py-12 sm:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Brand Section */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">R</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Richie</h3>
-                  <p className="text-sm text-neutral-500">AI/ML Engineer & Cloud Solutions Architect</p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand Section */}
+          <div>
+            <div className="mb-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center mb-3">
+                <span className="text-white font-bold text-lg">R</span>
               </div>
-              <p className="text-neutral-400 mb-6 max-w-md leading-relaxed">
-                ASU Data Science graduate student specializing in generative AI, cloud infrastructure, and full-stack ML solutions. Passionate about building impactful AI applications.
-              </p>
-              {/* Social Links */}
-              <div className="flex space-x-3">
-                {socialLinks.map((link) => (
+              <h3 className="text-lg font-bold text-white mb-1">Richie Liu</h3>
+              <p className="text-xs text-neutral-400">AI/ML Engineer & Cloud Architect</p>
+            </div>
+            <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+              ASU Data Science graduate specializing in generative AI, machine learning, and cloud infrastructure.
+            </p>
+            {/* Social Links */}
+            <div className="flex gap-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-neutral-800 hover:bg-sky-500 text-neutral-400 hover:text-white transition-all duration-300"
+                  aria-label={link.label}
+                >
+                  <i className={`${link.icon}`}></i>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-bold text-sm mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
                   <a
-                    key={link.label}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 flex items-center justify-center rounded-lg bg-neutral-800 text-neutral-400 ${link.color} transition-all duration-300 hover:scale-110 hover:bg-neutral-700`}
-                    aria-label={link.label}
+                    className="text-sm text-neutral-400 hover:text-sky-400 transition-colors duration-300"
                   >
-                    <i className={`${link.icon} text-lg`}></i>
+                    {link.label}
                   </a>
-                ))}
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                {quickLinks.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-neutral-400 hover:text-sky-400 transition-colors duration-300 inline-flex items-center group"
-                    >
-                      <i className="fas fa-chevron-right text-xs mr-2 text-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Contact</h4>
-              <ul className="space-y-3">
-                {contactInfo.map((item) => (
-                  <li key={item.label} className="flex items-center space-x-3">
-                    <i className={`${item.icon} text-sky-400 w-5`}></i>
-                    <div>
-                      <p className="text-xs text-neutral-500 uppercase tracking-wider mb-0.5">{item.label}</p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="text-neutral-300 hover:text-sky-400 transition-colors duration-300"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-neutral-300">{item.value}</p>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-white font-bold text-sm mb-4">Contact</h4>
+            <ul className="space-y-3">
+              {contactInfo.map((item) => (
+                <li key={item.label} className="flex items-start gap-2">
+                  <i className={`${item.icon} text-sky-400 mt-1`}></i>
+                  <div className="flex-1">
+                    <p className="text-xs text-neutral-500 uppercase">{item.label}</p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-sm text-neutral-300 hover:text-sky-400 transition-colors duration-300 break-all"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-neutral-300">{item.value}</p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-neutral-800 py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-sm text-neutral-500">
-              &copy; {currentYear} <span className="text-neutral-400 font-medium">Richie Liu</span>. All rights reserved.
+        <div className="border-t border-neutral-800 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+            <p>
+              &copy; {currentYear} <span className="text-neutral-300 font-semibold">Richie Liu</span>. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <p className="text-neutral-500">
-                Built with{" "}
-                <a
-                  href="https://nextjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-sky-400 transition-colors duration-300"
-                >
-                  Next.js
-                </a>
-                {" & "}
-                <a
-                  href="https://tailwindcss.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-sky-400 transition-colors duration-300"
-                >
-                  Tailwind
-                </a>
-              </p>
-            </div>
+            <p>
+              Built with{" "}
+              <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
+                Next.js
+              </a>
+              {" & "}
+              <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
+                Tailwind CSS
+              </a>
+            </p>
           </div>
         </div>
       </div>

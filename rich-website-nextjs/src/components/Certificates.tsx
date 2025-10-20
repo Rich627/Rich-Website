@@ -58,40 +58,55 @@ const certificatesData = [
 ];
 
 export default function Certificates() {
+  // Group certifications by provider
+  const gcpCerts = certificatesData.filter(cert => cert.title.includes('GCP'));
+  const awsCerts = certificatesData.filter(cert => cert.title.includes('AWS'));
+  const azureCerts = certificatesData.filter(cert => cert.title.includes('Azure'));
+
   return (
-    <section id="certificates" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+    <section id="certificates" className="py-16 sm:py-24 bg-neutral-900 text-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-5xl font-extrabold text-sky-400 tracking-tight mb-6">
-            Certifications
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-sky-400 mb-4">
+            Professional Certifications
           </h2>
-          <p className="text-lg text-slate-300 mb-10">
-            Professional Cloud & AI/ML Certifications across AWS, GCP, and Azure
+          <div className="w-24 h-1 bg-sky-500 mx-auto"></div>
+          <p className="mt-4 text-lg text-neutral-400 max-w-3xl mx-auto">
+            Multi-cloud expertise validated by industry-recognized certifications
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {certificatesData.map((cert, index) => (
-            <a
-              key={index}
-              href={cert.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-slate-900 hover:bg-slate-800 rounded-2xl p-5 border border-slate-700 shadow-lg hover:shadow-cyan-500/30 transition duration-300"
-            >
-              <div className="aspect-[4/3] relative mb-4 rounded-xl overflow-hidden">
-                <Image
-                  src={cert.imgSrc}
-                  alt={cert.alt}
-                  fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="text-center text-base font-medium text-slate-100 group-hover:text-cyan-300">
-                {cert.title}
-              </div>
-            </a>
-          ))}
+        {/* Certification Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-500/10 to-sky-500/10 border border-blue-500/30 rounded-xl p-6 text-center">
+            <div className="text-4xl font-black text-blue-400 mb-2">{gcpCerts.length}</div>
+            <div className="text-sm text-neutral-300 font-medium">Google Cloud Platform</div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border border-orange-500/30 rounded-xl p-6 text-center">
+            <div className="text-4xl font-black text-orange-400 mb-2">{awsCerts.length}</div>
+            <div className="text-sm text-neutral-300 font-medium">Amazon Web Services</div>
+          </div>
+          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-6 text-center">
+            <div className="text-4xl font-black text-cyan-400 mb-2">{azureCerts.length}</div>
+            <div className="text-sm text-neutral-300 font-medium">Microsoft Azure</div>
+          </div>
+        </div>
+
+        {/* View on Credly Button */}
+        <div className="text-center">
+          <a
+            href="https://www.credly.com/users/rich-liu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/btn relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/50 overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              <i className="fas fa-award text-xl"></i>
+              <span>View All Certifications on Credly</span>
+              <i className="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+          </a>
         </div>
       </div>
     </section>

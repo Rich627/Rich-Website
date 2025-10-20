@@ -114,3 +114,4 @@ The portfolio emphasizes:
 - Data Science and Machine Learning expertise
 - Solution Architecture experience at iKala
 - Multiple technical projects across AI, data engineering, and cloud
+- 另外我現在是用 s3 host static website 你可以用 aws command 去改設定把網站部署上去

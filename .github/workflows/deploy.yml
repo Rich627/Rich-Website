@@ -3,21 +3,44 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'rich-website-nextjs/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./rich-website-nextjs
+        run: npm ci
+
+      - name: Build Next.js
+        working-directory: ./rich-website-nextjs
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-northeast-1 
+          aws-region: us-east-1
 
       - name: Deploy to S3
+        working-directory: ./rich-website-nextjs
+        run: aws s3 sync out/ s3://rich-liu.com --delete
+
+      - name: Invalidate CloudFront cache (optional)
         run: |
-          aws s3 sync . s3://rich-liu.com --delete
+          if [ -n "${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" ]; then
+            aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+          fi

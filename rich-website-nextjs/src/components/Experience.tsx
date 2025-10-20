@@ -103,8 +103,8 @@ export default function Experience() {
                             <span className="text-xs text-sky-400 font-medium">{item.time}</span>
                           </div>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-base text-sky-300/80 font-medium mb-2">{item.company}</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                        <p className="text-base text-sky-400 font-medium mb-2">{item.company}</p>
                         <p className={`text-sm text-neutral-400 flex items-center gap-1 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                           <i className="fas fa-map-marker-alt text-xs"></i>
                           {item.location}

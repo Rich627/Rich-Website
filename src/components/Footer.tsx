@@ -57,24 +57,15 @@ export default function Footer() {
     },
   ];
 
-  const quickLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#certificates", label: "Certifications" },
-    { href: "#skill-set", label: "Skills" },
-    { href: "#resume", label: "Experience" },
-    { href: "#portfolio", label: "Projects" },
-    { href: "#blog", label: "Blog" },
-  ];
-
   return (
     <footer id="footer" className="relative bg-neutral-900 text-neutral-400 border-t border-neutral-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-8">
           {/* Brand Section */}
           <div>
-            <div className="mb-4">
-              <div className="mb-3">
+            <div className="mb-6">
+              <div className="flex items-center gap-3 mb-4">
                 <Image
                   src="/img/logo/rich-low-resolution-logo-white-on-transparent-background.png"
                   alt="Richie Liu"
@@ -82,60 +73,52 @@ export default function Footer() {
                   height={40}
                   className="w-10 h-10"
                 />
+                <div>
+                  <h3 className="text-lg font-bold text-white">Richie Liu</h3>
+                  <p className="text-xs text-sky-400 font-medium">AI/ML Engineer & Cloud Architect</p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-1">Richie Liu</h3>
-              <p className="text-xs text-neutral-400">AI/ML Engineer & Cloud Architect</p>
+              <p className="text-sm text-neutral-400 leading-relaxed">
+                ASU Data Science graduate student specializing in generative AI, machine learning, and cloud infrastructure.
+                AWS AI Community Builder passionate about building scalable AI solutions.
+              </p>
             </div>
-            <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-              ASU Data Science graduate specializing in generative AI, machine learning, and cloud infrastructure.
-            </p>
             {/* Social Links */}
-            <div className="flex gap-2">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-neutral-800 hover:bg-sky-500 text-neutral-400 hover:text-white transition-all duration-300"
-                  aria-label={link.label}
-                >
-                  <i className={`${link.icon}`}></i>
-                </a>
-              ))}
+            <div>
+              <p className="text-xs text-neutral-500 uppercase font-semibold mb-3">Connect With Me</p>
+              <div className="flex gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-neutral-800 hover:bg-sky-500 text-neutral-400 hover:text-white transition-all duration-300 hover:scale-110"
+                    aria-label={link.label}
+                  >
+                    <i className={`${link.icon} text-lg`}></i>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Contact Info - Simple List */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-neutral-400 hover:text-sky-400 transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-white font-bold text-sm mb-4">Contact</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-bold text-base mb-6 flex items-center gap-2">
+              <i className="fas fa-paper-plane text-sky-400"></i>
+              Get In Touch
+            </h4>
+            <div className="space-y-5">
               {contactInfo.map((item) => (
-                <li key={item.label} className="flex items-start gap-2">
-                  <i className={`${item.icon} text-sky-400 mt-1`}></i>
-                  <div className="flex-1">
-                    <p className="text-xs text-neutral-500 uppercase">{item.label}</p>
+                <div key={item.label} className="flex items-start gap-3">
+                  <i className={`${item.icon} text-sky-400 mt-1 text-lg`}></i>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-neutral-500 uppercase font-semibold mb-1">{item.label}</p>
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="text-sm text-neutral-300 hover:text-sky-400 transition-colors duration-300 break-all"
+                        className="text-sm text-neutral-300 hover:text-sky-400 transition-colors duration-300 break-all block"
                       >
                         {item.value}
                       </a>
@@ -143,9 +126,9 @@ export default function Footer() {
                       <p className="text-sm text-neutral-300">{item.value}</p>
                     )}
                   </div>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 

@@ -96,14 +96,11 @@ export default function Certificates() {
             href="https://www.credly.com/users/rich-liu"
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/50 overflow-hidden"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-neutral-800 hover:bg-sky-500 text-neutral-300 hover:text-white rounded-lg border border-neutral-700 hover:border-sky-500 transition-all duration-300 group font-medium"
           >
-            <span className="relative z-10 flex items-center gap-3">
-              <i className="fas fa-award text-xl"></i>
-              <span>View All Certifications on Credly</span>
-              <i className="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+            <i className="fas fa-award text-xl"></i>
+            <span>View All Certifications on Credly</span>
+            <i className="fas fa-external-link-alt text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
           </a>
         </div>
       </div>

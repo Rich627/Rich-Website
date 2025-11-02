@@ -51,7 +51,7 @@ export default function Intro() {
               <div className="flex flex-wrap items-center gap-3 text-lg text-neutral-300 font-medium animate-slide-up delay-100">
                 <div className="flex items-center gap-2">
                   <span className="inline-block w-2 h-2 bg-sky-400 rounded-full animate-pulse"></span>
-                  <span>M.S. Data Science @ ASU</span>
+                  <span>M.S. Data Science, ASU</span>
                 </div>
                 <span className="text-neutral-600">|</span>
                 <div className="flex items-center gap-2">

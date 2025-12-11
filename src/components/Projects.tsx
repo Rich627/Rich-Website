@@ -76,10 +76,20 @@ const projectsData = [
   },
   {
     imageSrc: "/img/project/viewsonic-caf.jpg",
-    title: "ViewSonic Cloud AI Framework",
-    description: "Contributed to ViewSonic's production Cloud AI Framework (CAF) enabling scalable ML model deployment for edge devices. Implemented cloud-edge integration and model optimization for IoT applications.",
-    impact: "Production system • Edge device optimization • Scalable architecture",
-    tags: ["Cloud Computing", "AI/ML", "Edge Computing", "Python", "Docker"],
+    title: "ViewSonic AWS Cloud Adoption Framework",
+    description: "Led implementation of AWS Cloud Adoption Framework (CAF) for ViewSonic's global organization, designed by AWS ProServe. Architected multi-account strategy with 50+ AWS accounts across 7 departments using AWS Control Tower, focusing on organizational governance, network architecture, security controls, billing management, and SSO integration.",
+    impact: "50+ AWS accounts • 7 departments • Enterprise-grade governance",
+    tags: ["AWS Control Tower", "AWS Organizations", "IaC", "Terraform", "Security", "Networking"],
+    githubUrl: null,
+    liveDemoUrl: null,
+    featured: true
+  },
+  {
+    imageSrc: "/img/project/viewsonic-webscale.png",
+    title: "ViewSonic AWS Web Scale Migration",
+    description: "Migrated ViewSonic US team's web infrastructure to AWS managed services using Terraform IaC. Implemented EC2 Auto Scaling, RDS Aurora MySQL, OpenSearch, ElastiCache Redis, EFS, and WAF across dev/staging/production environments. Provided architecture optimization, data migration support, and CI/CD pipeline recommendations.",
+    impact: "3 environments • 10+ AWS services • Reduced operational overhead",
+    tags: ["Terraform", "AWS Aurora", "OpenSearch", "ElastiCache", "WAF", "Auto Scaling"],
     githubUrl: null,
     liveDemoUrl: null,
     featured: true

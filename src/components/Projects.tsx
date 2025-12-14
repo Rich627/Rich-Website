@@ -35,10 +35,20 @@ const projectsData = [
     featured: true
   },
   {
+    imageSrc: "/img/project/whatsapp-chatbot.png",
+    title: "WhatsApp AI Chatbot Platform",
+    description: "Full-stack WhatsApp chatbot with two deployment options: local development (Flask + Ollama + LangGraph) and AWS production (Lambda + Bedrock + DynamoDB). Features multi-agent architecture (Router, RAG, General, Summarizer), runtime model switching, and per-user preferences. Terraform IaC for infrastructure deployment.",
+    impact: "Dual deployment options • Multi-agent LangGraph architecture • RAG knowledge base",
+    tags: ["AWS Lambda", "Bedrock", "LangGraph", "DynamoDB", "Terraform", "Docker"],
+    githubUrl: "https://github.com/Rich627/whatsapp-ai-chatbot",
+    liveDemoUrl: null,
+    featured: true
+  },
+  {
     imageSrc: "/img/project/taylor-swift-workshop.jpg",
     title: "AWS Educate Taylor Swift Data Analytics Workshop",
-    description: "Interactive data analysis workshop using AWS analytics services to explore Taylor Swift's music data. Guided 200+ participants through hands-on exercises with S3, Athena, QuickSight, and Glue for ETL pipelines and data visualization.",
-    impact: "200+ participants trained • 4.8/5 satisfaction • Open-source curriculum",
+    description: "Interactive data analysis workshop using AWS analytics services to explore Taylor Swift's music data. Guided 80+ participants through hands-on exercises with S3, Athena, QuickSight, and Glue for ETL pipelines and data visualization.",
+    impact: "80+ participants trained • 4.8/5 satisfaction • Open-source curriculum",
     tags: ["AWS Athena", "QuickSight", "S3", "Glue", "Data Analytics"],
     githubUrl: "https://github.com/Rich627/aws_educate_taylor_swift_workshop",
     liveDemoUrl: null,
@@ -96,9 +106,9 @@ const projectsData = [
   },
   {
     imageSrc: "/img/project/advantech-hackathon.jpg",
-    title: "Smart Infrastructure Inspection System",
-    description: "AI-powered infrastructure inspection solution for 2025 Taiwan GenAI Hackathon by Ambassador Avengers Assembly. Deployed edge-cloud architecture using Advantech ICAM-540 camera with YOLOv11 for real-time anomaly detection on 30,000+ bridges and tunnels. Terraform IaC deployment on AWS (Bedrock, Lambda, S3, OpenSearch).",
-    impact: "Hackathon competition entry • Real-time inspection • Infrastructure safety automation",
+    title: "Smart Infrastructure Inspection System (MVP)",
+    description: "MVP prototype developed for 2025 Taiwan GenAI Hackathon by Ambassador Avengers Assembly. Designed edge-cloud architecture concept using Advantech ICAM-540 camera with YOLOv11 for real-time anomaly detection. Terraform IaC deployment on AWS (Bedrock, Lambda, S3, OpenSearch).",
+    impact: "Hackathon MVP • Edge-cloud architecture design • Proof of concept",
     tags: ["AWS Bedrock", "YOLOv11", "Lambda", "Terraform", "Docker", "Edge AI"],
     githubUrl: "https://github.com/Rich627/advantech-hackathon",
     liveDemoUrl: null,

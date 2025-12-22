@@ -88,13 +88,24 @@ Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`):
 - Region: `ap-northeast-1`
 - Type: Static website hosting
 
+### CloudFront Configuration
+
+- Distribution ID: `E198OF3F75433Q`
+- Domain: `d3qohzxcv73fr3.cloudfront.net`
+- Aliases: `rich-liu.com`, `www.rich-liu.com`
+
+**CloudFront Function** (`cloudfront/url-rewrite-html.js`):
+- Rewrites URLs without extensions to `.html` (e.g., `/resume` → `/resume.html`)
+- Required for S3 static hosting with clean URLs
+- Function ARN: `arn:aws:cloudfront::070576557102:function/url-rewrite-html`
+
 ### AWS CLI Usage
 
 **IMPORTANT: When using AWS CLI commands for this project, always use the profile `my-profile`:**
 
 ```bash
 aws s3 ls s3://rich-liu.com --profile my-profile
-aws cloudfront create-invalidation --distribution-id XXX --profile my-profile
+aws cloudfront create-invalidation --distribution-id E198OF3F75433Q --profile my-profile
 ```
 
 ## Key Features

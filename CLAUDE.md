@@ -70,30 +70,23 @@ The app uses a **hybrid styling approach**:
 
 ## Deployment
 
-### AWS S3 Static Website Hosting
+### CI/CD via GitHub Actions (Required)
 
-The site is hosted on AWS S3 as a static website. Deployment can be done using AWS CLI:
+**IMPORTANT: Always use CI/CD for deployment. Do NOT use `aws s3 sync` commands directly.**
 
-```bash
-# Build the static site
-npm run build
+Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`):
+- Triggers on push to `main` branch
+- Builds the Next.js static site
+- Syncs to S3 bucket automatically
+- Requires secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
 
-# Sync to S3 bucket
-aws s3 sync out/ s3://rich-liu.com --region ap-northeast-1
+**To deploy: Just commit and push to `main` branch. GitHub Actions handles the rest.**
 
-# Or use AWS CLI to update bucket configuration
-```
+### S3 Configuration (Reference Only)
 
-**S3 Configuration:**
 - Bucket: `rich-liu.com`
 - Region: `ap-northeast-1`
 - Type: Static website hosting
-
-### GitHub Actions
-
-Automated deployment via GitHub Actions (`.github/workflows/deploy.yml`):
-- Triggers on push to `main` branch
-- Requires secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
 
 ## Key Features
 

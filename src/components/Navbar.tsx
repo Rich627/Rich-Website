@@ -24,6 +24,7 @@ export default function Navbar() {
     { href: "#certificates", label: "Certifications" },
     { href: "#blog", label: "Blog" },
     { href: "#footer", label: "Contact" },
+    { href: "/resume", label: "Resume", isExternal: true },
   ];
 
   return (
@@ -57,6 +58,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm font-medium text-neutral-300 hover:text-white transition-colors duration-200"
               >
                 {link.label}
@@ -105,6 +107,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="block px-4 py-2 text-neutral-300 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-all duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

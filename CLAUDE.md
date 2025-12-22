@@ -88,6 +88,15 @@ Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`):
 - Region: `ap-northeast-1`
 - Type: Static website hosting
 
+### AWS CLI Usage
+
+**IMPORTANT: When using AWS CLI commands for this project, always use the profile `my-profile`:**
+
+```bash
+aws s3 ls s3://rich-liu.com --profile my-profile
+aws cloudfront create-invalidation --distribution-id XXX --profile my-profile
+```
+
 ## Key Features
 
 ### Portfolio Content

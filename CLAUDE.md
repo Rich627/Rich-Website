@@ -2,6 +2,22 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## General Claude Code doctrine (read this first)
+
+`~/.claude/CLAUDE.md` points to `~/.claude/docs/agent-ops/` — a set of cross-project
+docs on when to delegate to a subagent, which model/effort tier to pick, how to tell
+"done" from "looks done," and when to stop and ask instead of guessing. Read the
+relevant file there when its trigger condition applies; this project file only covers
+what's specific to *this* repo.
+
+**Calibration for this repo specifically:** the global dispatch protocol was written
+against a large, multi-service codebase and its delegation thresholds assume that
+scale. This repo is a single-page static Next.js site with ~10 components — most
+tasks here are a one- or two-file edit. Don't mechanically delegate a small styling
+tweak or copy change just because a global doc says "delegate anything non-trivial";
+use the same judgment the global docs describe, applied to a repo this size. Do still
+delegate genuinely broad work (e.g., "audit every component for X", full-repo greps).
+
 ## Repository Overview
 
 This is Rich Liu's personal portfolio website - a modern Next.js 15 application with React 19, TypeScript, and Tailwind CSS.
@@ -117,15 +133,6 @@ aws cloudfront create-invalidation --distribution-id E198OF3F75433Q --profile my
 - **9+ Certifications** from AWS, GCP, and Azure
 - **25+ Technical Skills** across AI/ML, cloud, and data engineering
 - **NDA Handling** for proprietary projects (displays "Proprietary Project - Under NDA" badge)
-
-### Recent Updates
-
-- Added AWS AI Community Builder badge to Intro section
-- Updated Projects component with current portfolio
-- Removed images from Blog component for cleaner layout
-- Logo-only navbar branding
-- Improved project card alignment with flexbox layout
-- Added object-contain for better image visibility
 
 ### Content Focus
 
